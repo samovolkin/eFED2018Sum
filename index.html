@@ -1,5 +1,8 @@
+<!DOCTYPE html>
+<html lang="ru">
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Погода в Ижевске</title>
     </head>
 
@@ -17,7 +20,9 @@
                 <!--Здесь должны быть загрязнение воздуха и 
                 форма поиска-->
                 Загрязнение воздуха: 8.168542554e-8
-                <input name="search" type="text" placeholder="Поиск">
+                <form name="search-form">
+                    <input name="search" type="text" placeholder="Поиск">
+                </form>
             </div>
 
 
@@ -27,7 +32,7 @@
                     <p>Ижевск, Россия</p>
                     <p>среда</p>
                     <p>облачно</p>
-                    <img src="Sunny Weather.png" alt="облачно">
+                    <img src="Sunny_Weather.png" alt="облачно">
                     22 C
                 </div>
                 <div>
@@ -42,101 +47,135 @@
             </div>
 
 
-            <div id="forecast">
-                <!--Здесь будет прогноз погоды на 7 дней-->
-                <div class="forecast-column">
-                    <div class="forecast-column-graph"></div> <!--Это блок для графика-->
+            <div id="graphics">
+                <div class="graphics-info">
+                    <div class="graphics-info-column-wrapper">
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                    </div>
                     <p>17:00</p>
+                </div>
 
-                    <div class="forecast-column-info">
+                <div class="graphics-info">
+                    <div class="graphics-info-column-wrapper">
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                    </div>
+                    <p>17:00</p>
+                </div>
+                
+                <div class="graphics-info">
+                    <div class="graphics-info-column-wrapper">
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                    </div>
+                    <p>17:00</p>
+                </div>
+                
+                <div class="graphics-info">
+                    <div class="graphics-info-column-wrapper">
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                    </div>
+                    <p>17:00</p>
+                </div>
+                
+                <div class="graphics-info">
+                    <div class="graphics-info-column-wrapper">
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                    </div>
+                    <p>17:00</p>
+                </div>
+                
+                <div class="graphics-info">
+                    <div class="graphics-info-column-wrapper">
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                    </div>
+                    <p>17:00</p>
+                </div>
+                
+                <div class="graphics-info">
+                    <div class="graphics-info-column-wrapper">
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                    </div>
+                    <p>17:00</p>
+                </div>
+                
+                <div class="graphics-info">
+                    <div class="graphics-info-column-wrapper">
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                        <div class="graphics-info-column"></div>
+                    </div>
+                    <p>17:00</p>
+                </div>    
+            </div>
+
+
+            <div id="forecast">
+                    <div class="forecast-info">
                         <p>ср</p>
-                        <img src="Weather_2.png" alt="weather2">
-                        <p>22* 13*</p>
+                        <img src="Weather_2.png" alt="дождь">
+                        <p>23* 17*</p>
                     </div>
-                </div>
 
-                <div class="forecast-column">
-                    <div class="forecast-column-graph"></div>
-                    <p>20:00</p>
-
-                    <div class="forecast-column-info">
-                        <p>чт</p>
-                        <img src="Weather_2.png" alt="weather2">
-                        <p>22* 13*</p>
-                    </div>
-                </div>
-
-                <div class="forecast-column">
-                    <div class="forecast-column-graph"></div>
-                    <p>23:00</p>
-
-                    <div class="forecast-column-info">
-                        <p>пт</p>
-                        <img src="Weather_2.png" alt="weather2">
-                        <p>22* 13*</p>
-                    </div>
-                </div>
-
-                <div class="forecast-column">
-                    <div class="forecast-column-graph"></div>
-                    <p>2:00</p>
-
-                    <div class="forecast-column-info">
-                        <p>сб</p>
-                        <img src="Weather_2.png" alt="weather2">
-                        <p>22* 13*</p>
-                    </div>
-                </div>
-
-                <div class="forecast-column">
-                    <div class="forecast-column-graph"></div>
-                    <p>5:00</p>
-
-                    <div class="forecast-column-info">
-                        <p>вс</p>
-                        <img src="Weather_2.png" alt="weather2">
-                        <p>22* 13*</p>
-                    </div>
-                </div>
-
-                <div class="forecast-column">
-                    <div class="forecast-column-graph"></div>
-                    <p>8:00</p>
-
-                    <div class="forecast-column-info">
-                        <p>пн</p>
-                        <img src="Weather_2.png" alt="weather2">
-                        <p>22* 13*</p>
-                    </div>
-                </div>
-
-                <div class="forecast-column">
-                    <div class="forecast-column-graph"></div>
-                    <p>11:00</p>
-
-                    <div class="forecast-column-info">
-                        <p>вт</p>
-                        <img src="Weather_2.png" alt="weather2">
-                        <p>22* 13*</p>
-                    </div>
-                </div>
-
-                <div class="forecast-column">
-                    <div class="forecast-column-graph"></div>
-                    <p>14:00</p>
-
-                    <div class="forecast-column-info">
+                    <div class="forecast-info">
                         <p>ср</p>
-                        <img src="Weather_2.png" alt="weather2">
-                        <p>22* 13*</p>
+                        <img src="Weather_2.png" alt="дождь">
+                        <p>23* 17*</p>
+                    </div>
+
+                    <div class="forecast-info">
+                        <p>ср</p>
+                        <img src="Weather_2.png" alt="дождь">
+                        <p>23* 17*</p>
+                    </div>
+
+                    <div class="forecast-info">
+                        <p>ср</p>
+                        <img src="Weather_2.png" alt="дождь">
+                        <p>23* 17*</p>
+                    </div>
+
+                    <div class="forecast-info">
+                        <p>ср</p>
+                        <img src="Weather_2.png" alt="дождь">
+                        <p>23* 17*</p>
+                    </div>
+
+                    <div class="forecast-info">
+                        <p>ср</p>
+                        <img src="Weather_2.png" alt="дождь">
+                        <p>23* 17*</p>
+                    </div>
+                    
+                    <div class="forecast-info">
+                        <p>ср</p>
+                        <img src="Weather_2.png" alt="дождь">
+                        <p>23* 17*</p>
+                    </div>
+                    
+                    <div class="forecast-info">
+                        <p>ср</p>
+                        <img src="Weather_2.png" alt="дождь">
+                        <p>23* 17*</p>
                     </div>
                 </div>
             </div>
 
-
-            <div id="footer">
+            <footer>
                 <center>2018 (c) Copyright</center>
-            </div>
+            </footer>
         </div>
     </body>
 </html>
