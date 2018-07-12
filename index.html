@@ -8,25 +8,27 @@
 
     <body>
         <div id="wrapper">
-            <nav>
-                <!--Здесь должны быть кнопки навигации-->
-                <a href="index.html">Сегодня</a>
-                <a href="5days.html">5 дней</a>
-                <a href="history.html">История погоды</a>
-            </nav>
+            <header>
+                <nav>
+                    <!--Здесь должны быть кнопки навигации-->
+                    <a href="index.html">Сегодня</a>
+                    <a href="5days.html">5 дней</a>
+                    <a href="history.html">История погоды</a>
+                </nav>
 
 
-            <div id="search-tab">
-                <!--Здесь должны быть загрязнение воздуха и 
-                форма поиска-->
-                Загрязнение воздуха: 8.168542554e-8
-                <form name="search-form">
-                    <input name="search" type="text" placeholder="Поиск">
-                </form>
-            </div>
+                <div id="search-tab">
+                    <!--Здесь должны быть загрязнение воздуха и 
+                    форма поиска-->
+                    Загрязнение воздуха: 8.168542554e-8
+                    <form name="search-form">
+                        <input name="search" type="text" placeholder="Поиск">
+                    </form>
+                </div>
+            </header>
 
             <main>
-                <div id="weather">
+                <section id="weather">
                     <!--Здесь будет прогноз погоды-->
                     <div>
                         <p>Ижевск, Россия</p>
@@ -44,10 +46,10 @@
                         <button name="precipitation-button">Вероятность осадков</button>
                         <button name="wind-button">Ветер</button>
                     </div>
-                </div>
+                </section>
 
 
-                <div id="graphics">
+                <section id="graphics">
                     <div class="graphics-info">
                         <div class="graphics-info-column-wrapper">
                             <div class="graphics-info-column"></div>
@@ -119,10 +121,10 @@
                         </div>
                         <p>17:00</p>
                     </div>    
-                </div>
+                </section>
 
 
-                <div id="forecast">
+                <section id="forecast">
                         <div class="forecast-info">
                             <p>ср</p>
                             <img src="Weather_2.png" alt="дождь">
@@ -171,7 +173,7 @@
                             <p>23* 17*</p>
                         </div>
                     </div>
-                </div>
+                </section>
             </main>
             
             <footer>
