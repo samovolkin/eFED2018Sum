@@ -1,0 +1,27 @@
+#weather-today,
+#weather-details
+{
+    display: inline-block;
+    margin: 0 7%;
+}
+
+#weather-today img
+{
+    display: inline-block;
+}
+
+#graphics,
+#forecast
+{
+    margin: auto;
+}
+
+.graphics-info,
+.forecast-info
+{
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    margin: 3px;
+}
+

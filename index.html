@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
-<html>
     <head>
         <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="styles/main.css">
+        <link type="text/css" rel="stylesheet" href="styles/today.css"> 
         <title>Погода в Ижевске</title>
     </head>
 
@@ -11,9 +12,9 @@
             <header>
                 <nav>
                     <!--Здесь должны быть кнопки навигации-->
-                    <a href="index.html">Сегодня</a>
-                    <a href="5days.html">5 дней</a>
-                    <a href="history.html">История погоды</a>
+                    <a href="index.html"><div class="navigation__link">Сегодня</div></a>
+                    <a href="5days.html"><div class="navigation__link">5 дней</div></a>
+                    <a href="history.html"><div class="navigation__link">История погоды</div></a>
                 </nav>
 
 
@@ -21,7 +22,7 @@
                     <!--Здесь должны быть загрязнение воздуха и 
                     форма поиска-->
                     Загрязнение воздуха: 8.168542554e-8
-                    <form name="search-form">
+                    <form name="search-form" class="search-tab__form">
                         <input name="search" type="text" placeholder="Поиск">
                     </form>
                 </div>
@@ -30,14 +31,14 @@
             <main>
                 <section id="weather">
                     <!--Здесь будет прогноз погоды-->
-                    <div>
+                    <div id="weather-today">
                         <p>Ижевск, Россия</p>
                         <p>среда</p>
                         <p>облачно</p>
                         <img src="Sunny_Weather.png" alt="облачно">
                         22 C
                     </div>
-                    <div>
+                    <div id="weather-details">
                         <p>Вероятность осадков: 20%</p>
                         <p>Влажность: 45%</p>
                         <p>Ветер: 11 км/ч</p>
@@ -172,7 +173,6 @@
                             <img src="Weather_2.png" alt="дождь">
                             <p>23* 17*</p>
                         </div>
-                    </div>
                 </section>
             </main>
             
