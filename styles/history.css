@@ -1,0 +1,16 @@
+.historical-table tr:nth-of-type(odd) :nth-child(odd){
+    background-color: grey;
+}
+
+.historical-table tr:nth-of-type(even) :nth-child(even) {
+    background-color: grey;
+}
+
+.historical-table td {
+    text-align: center;
+    height: 2em;
+}
+
+.historical-table {
+    margin: 10px auto;
+}

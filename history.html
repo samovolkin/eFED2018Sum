@@ -3,117 +3,112 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <link rel="stylesheet" type="text/css" href="styles/history.css">
         <title>Погода в Ижевске</title>
     </head>
 
     <body>
         <div id="wrapper">
-            <header>
-                <nav>
-                    <!--Здесь должны быть кнопки навигации-->
-                    <a href="index.html">Сегодня</a>
-                    <a href="5days.html">5 дней</a>
-                    <a href="history.html">История погоды</a>
-                </nav>
+            <nav id="navigation">
+                <!--Здесь должны быть кнопки навигации-->
+                <a href="index.html"><div class="navigation__link">Сегодня</div></a>
+                <a href="5days.html"><div class="navigation__link">5 дней</div></a>
+                <a href="history.html"><div class="navigation__link">История погоды</div></a>
+            </nav>
 
+            <div id="search-tab">
+                Загрязнение воздуха: 8.168542554e-8
+                <form name="search-tab__form" class="search-tab__form">
+                    <input name="search" type="text" placeholder="Поиск">
+                </form>
+            </div>
 
-                <div id="search-tab">
-                    <!--Здесь должны быть загрязнение воздуха и 
-                    форма поиска-->
-                    Загрязнение воздуха: 8.168542554e-8
-                    <form name="search-form">
-                        <input name="search" type="text" placeholder="Поиск">
-                    </form>
-                </div>
-            </header>
-            
-            <!--Здесь распологается основная часть страницы-->
             <main>
-                <table>
+                <table class="historical-table">
                     <tr>
-                        <td bgcolor="grey"></td>
-                        <td bgcolor="white">Январь</td>
-                        <td bgcolor="grey">Февраль</td>
-                        <td bgcolor="white">Март</td>
-                        <td bgcolor="grey">Апрель</td>
-                        <td bgcolor="white">Май</td>
-                        <td bgcolor="grey">Июнь</td>
-                        <td bgcolor="white">Июль</td>
-                        <td bgcolor="grey">Август</td>
-                        <td bgcolor="white">Сентябрь</td>
-                        <td bgcolor="grey">Октябрь</td>
-                        <td bgcolor="white">Ноябрь</td>
-                        <td bgcolor="grey">Декабрь</td>
+                        <td></td>
+                        <td>Январь</td>
+                        <td>Февраль</td>
+                        <td>Март</td>
+                        <td>Апрель</td>
+                        <td>Май</td>
+                        <td>Июнь</td>
+                        <td>Июль</td>
+                        <td>Август</td>
+                        <td>Сентябрь</td>
+                        <td>Октябрь</td>
+                        <td>Ноябрь</td>
+                        <td>Декабрь</td>
                     </tr>
-
+                    
                     <tr>
                         <td>Средний максимум</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
                     </tr>
-
+                    
                     <tr>
-                        <td bgcolor="grey">Средний минимум</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
+                        <td>Средний минимум</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
                     </tr>
-
+            
                     <tr>
                         <td>Рекордный максимум</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
                     </tr>
-
+            
                     <tr>
-                        <td bgcolor="grey">Рекордный минимум</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
-                        <td bgcolor="white">-5</td>
-                        <td bgcolor="grey">-9</td>
+                        <td>Рекордный минимум</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
+                        <td>-5</td>
+                        <td>-9</td>
                     </tr>
                 </table>
             </main>
-            <!--Здесь заканчивается основная часть страницы-->
-
-            <footer>
+            
+            <footer id="footer">
                 <center>2018 (c) Copyright</center>
             </footer>
         </div>
