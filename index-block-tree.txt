@@ -1,0 +1,16 @@
+div#wrapper
+    nav#navigation
+        div.navigation__link
+    div#search-tab
+        form.search-tab__form
+    <main>
+        section#weather
+            div.weather__today
+            div.weather__details
+        section#graphics
+            div.graphics-info
+                div.graphics-info__column
+                div.graphics-info__column
+                div.graphics-info__column
+                p.graphics-info__time
+    footer#footer

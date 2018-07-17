@@ -1,50 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
+<html>
     <head>
         <meta charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="styles/main.css">
-        <link type="text/css" rel="stylesheet" href="styles/today.css"> 
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <link rel="stylesheet" type="text/css" href="styles/today.css">
         <title>Погода в Ижевске</title>
     </head>
 
     <body>
         <div id="wrapper">
-            <header>
-                <nav>
-                    <!--Здесь должны быть кнопки навигации-->
-                    <a href="index.html"><div class="navigation__link">Сегодня</div></a>
-                    <a href="5days.html"><div class="navigation__link">5 дней</div></a>
-                    <a href="history.html"><div class="navigation__link">История погоды</div></a>
-                </nav>
+            <nav id="navigation">
+                <!--Здесь должны быть кнопки навигации-->
+                <a href="index.html"><div class="navigation__link">Сегодня</div></a>
+                <a href="5days.html"><div class="navigation__link">5 дней</div></a>
+                <a href="history.html"><div class="navigation__link">История погоды</div></a>
+            </nav>
 
-
-                <div id="search-tab">
-                    <!--Здесь должны быть загрязнение воздуха и 
-                    форма поиска-->
-                    Загрязнение воздуха: 8.168542554e-8
-                    <form name="search-form" class="search-tab__form">
-                        <input name="search" type="text" placeholder="Поиск">
-                    </form>
-                </div>
-            </header>
+            <div id="search-tab">
+                Загрязнение воздуха: 8.168542554e-8
+                <form name="search-tab__form" class="search-tab__form">
+                    <input name="search" type="text" placeholder="Поиск">
+                </form>
+            </div>
 
             <main>
                 <section id="weather">
                     <!--Здесь будет прогноз погоды-->
-                    <div id="weather-today">
+                    <div class="weather-today">
                         <p>Ижевск, Россия</p>
                         <p>среда</p>
                         <p>облачно</p>
-                        <img src="Sunny_Weather.png" alt="облачно">
-                        22 C
+                        <img src="Sunny_Weather.png" alt="облачно" class="weather-today__img">
+                        <div class="weather-today__temperature">22°C</div>
                     </div>
-                    <div id="weather-details">
+                    <div class="weather-details">
                         <p>Вероятность осадков: 20%</p>
                         <p>Влажность: 45%</p>
                         <p>Ветер: 11 км/ч</p>
 
                         <button name="temperature-button" >Температура</button>
-                        <button name="precipitation-button">Вероятность осадков</button>
+                        <button name="precipitation-button" class="weather-details__precipitation-button">Вероятность осадков</button>
                         <button name="wind-button">Ветер</button>
                     </div>
                 </section>
@@ -52,131 +48,139 @@
 
                 <section id="graphics">
                     <div class="graphics-info">
-                        <div class="graphics-info-column-wrapper">
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                        </div>
-                        <p>17:00</p>
+                        <div class="graphics-info__column" style="height: 30px">
+                            <span class="visible"></span></div>
+                        <div class="graphics-info__column" style="height: 10px">
+                            <span class="visible"></span></div>
+                        <div class="graphics-info__column" style="height: 20px">
+                            <span class="visible">10%</span></div>
+                        <p class="graphics-info__time">17:00</p>
                     </div>
 
                     <div class="graphics-info">
-                        <div class="graphics-info-column-wrapper">
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                        </div>
-                        <p>17:00</p>
+                        <div class="graphics-info__column" style="height: 30px">
+                            <span class="visible"></span></div>
+                        <div class="graphics-info__column" style="height: 10px">
+                            <span class="visible"></span></div>
+                        <div class="graphics-info__column" style="height: 20px">
+                            <span class="visible"></span></div>
+                        <p class="graphics-info__time">20:00</p>
+                    </div>
+
+                    <div class="graphics-info">
+                        <div class="graphics-info__column" style="height: 30px">
+                            <span class="visible"></span></div>
+                        <div class="graphics-info__column" style="height: 10px">
+                            <span class="visible"></span></div>
+                        <div class="graphics-info__column" style="height: 20px">
+                            <span class="visible"></span></div>
+                        <p class="graphics-info__time">19:00</p>
                     </div>
                     
                     <div class="graphics-info">
-                        <div class="graphics-info-column-wrapper">
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                        </div>
-                        <p>17:00</p>
+                        <div class="graphics-info__column" style="height: 30px">
+                            <span class="visible">30%</span></div>
+                        <div class="graphics-info__column" style="height: 10px">
+                            <span class="visible"></span></div>
+                        <div class="graphics-info__column" style="height: 20px">
+                            <span class="visible"></span></div>
+                        <p class="graphics-info__time">2:00</p>
+                    </div>
+
+                    <div class="graphics-info">
+                        <div class="graphics-info__column" style="height: 30px">
+                            <span class="visible"></span></div>
+                        <div class="graphics-info__column" style="height: 10px">
+                            <span class="visible"></span></div>
+                        <div class="graphics-info__column" style="height: 20px">
+                            <span class="visible"></span></div>
+                        <p class="graphics-info__time">5:00</p>
+                    </div>
+
+                    <div class="graphics-info">
+                        <div class="graphics-info__column" style="height: 30px">
+                            <span class="visible"></span></div>
+                        <div class="graphics-info__column" style="height: 10px">
+                            <span class="visible"></span></div>
+                        <div class="graphics-info__column" style="height: 20px">
+                            <span class="visible"></span></div>
+                        <p class="graphics-info__time">8:00</p>
+                    </div>
+
+                    <div class="graphics-info">
+                        <div class="graphics-info__column" style="height: 30px">
+                            <span class="visible"></span></div>
+                        <div class="graphics-info__column" style="height: 10px">
+                            <span class="visible"></span></div>
+                        <div class="graphics-info__column" style="height: 20px">
+                            <span class="visible"></span></div>
+                        <p class="graphics-info__time">11:00</p>
                     </div>
                     
                     <div class="graphics-info">
-                        <div class="graphics-info-column-wrapper">
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                        </div>
-                        <p>17:00</p>
+                        <div class="graphics-info__column" style="height: 30px">
+                            <span class="visible"></span></div>
+                        <div class="graphics-info__column" style="height: 10px">
+                            <span class="visible"></span></div>
+                        <div class="graphics-info__column" style="height: 20px">
+                            <span class="visible"></span></div>
+                        <p class="graphics-info__time">14:00</p>
                     </div>
-                    
-                    <div class="graphics-info">
-                        <div class="graphics-info-column-wrapper">
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                        </div>
-                        <p>17:00</p>
-                    </div>
-                    
-                    <div class="graphics-info">
-                        <div class="graphics-info-column-wrapper">
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                        </div>
-                        <p>17:00</p>
-                    </div>
-                    
-                    <div class="graphics-info">
-                        <div class="graphics-info-column-wrapper">
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                        </div>
-                        <p>17:00</p>
-                    </div>
-                    
-                    <div class="graphics-info">
-                        <div class="graphics-info-column-wrapper">
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                            <div class="graphics-info-column"></div>
-                        </div>
-                        <p>17:00</p>
-                    </div>    
                 </section>
 
 
                 <section id="forecast">
-                        <div class="forecast-info">
-                            <p>ср</p>
-                            <img src="Weather_2.png" alt="дождь">
-                            <p>23* 17*</p>
+                        <div class="forecast-info forecast-info--selected">
+                            <p class="forecast-info__day">ср</p>
+                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
+                            <p class="forecast-info__temperature">23°C 17°C</p>
                         </div>
 
                         <div class="forecast-info">
-                            <p>ср</p>
-                            <img src="Weather_2.png" alt="дождь">
-                            <p>23* 17*</p>
+                            <p class="forecast-info__day">чт</p>
+                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
+                            <p class="forecast-info__temperature">19°C 15°C</p>
                         </div>
 
                         <div class="forecast-info">
-                            <p>ср</p>
-                            <img src="Weather_2.png" alt="дождь">
-                            <p>23* 17*</p>
+                            <p class="forecast-info__day">пт</p>
+                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
+                            <p class="forecast-info__temperature">15°C 11°C</p>
                         </div>
 
                         <div class="forecast-info">
-                            <p>ср</p>
-                            <img src="Weather_2.png" alt="дождь">
-                            <p>23* 17*</p>
+                            <p class="forecast-info__day">сб</p>
+                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
+                            <p class="forecast-info__temperature">18°C 15°C</p>
                         </div>
 
                         <div class="forecast-info">
-                            <p>ср</p>
-                            <img src="Weather_2.png" alt="дождь">
-                            <p>23* 17*</p>
+                            <p class="forecast-info__day">вс</p>
+                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
+                            <p class="forecast-info__temperature">21°C 17°C</p>
                         </div>
 
                         <div class="forecast-info">
-                            <p>ср</p>
-                            <img src="Weather_2.png" alt="дождь">
-                            <p>23* 17*</p>
+                            <p class="forecast-info__day">пн</p>
+                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
+                            <p class="forecast-info__temperature">20°C 16°C</p>
                         </div>
-                        
+
                         <div class="forecast-info">
-                            <p>ср</p>
-                            <img src="Weather_2.png" alt="дождь">
-                            <p>23* 17*</p>
+                            <p class="forecast-info__day">вт</p>
+                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
+                            <p class="forecast-info__temperature">19°C 15°C</p>
                         </div>
-                        
+
                         <div class="forecast-info">
-                            <p>ср</p>
-                            <img src="Weather_2.png" alt="дождь">
-                            <p>23* 17*</p>
+                            <p class="forecast-info__day">ср</p>
+                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
+                            <p class="forecast-info__temperature">23°C 20°C</p>
                         </div>
                 </section>
             </main>
             
-            <footer>
+            <footer id="footer">
                 <center>2018 (c) Copyright</center>
             </footer>
         </div>
