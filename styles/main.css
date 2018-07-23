@@ -1,7 +1,7 @@
 #wrapper
 {
     margin: auto;
-    width: 720px;
+    width: 800px;
     border: 1px solid darkgray;
     color: rgb(68, 68, 68);
     font-family: 'Arial', serif ;
@@ -12,16 +12,30 @@
 {
     border-bottom: 1px solid darkgray;
     background-color: gainsboro;
-    /*height: 50px;*/
-    padding: 10px;
+    padding: 10px 0;
 }
 
-div.navigation__link
+#search-input {
+    background: lightgray;
+}
+
+.navigation_ul {
+    margin: 0;
+    font-size: 0;
+    -webkit-padding-start: 12px;
+}
+
+.navigation_ul li
 {
     display: inline-block;
     border: 1px solid darkgray;
     background-color: #fff;
-    padding: 3px 7px;
+    padding: 0px 7px;
+    height: 2em;
+    line-height: 2em;
+    margin: 0;
+    font-size: 12px;
+    margin-right: 4px;
     /*color: dimgray;*/
 }
 
@@ -31,19 +45,25 @@ div.navigation__link
     background-color: whitesmoke;
     padding: 5px 7px;
     height: 1.6em;
+    position: relative;
 }
 
 .search-tab__form
 {
     display: inline-block;
-    float: right;
+    position: absolute;
+    right: 20px;
 }
 
+.search-tab__form::before {
+    content: url("/images/ic_head_loupe.svg");
+    position: relative;
+    top: 2px;
+}
 
 #footer
 {
     background-color: gainsboro;
-    /*height: 50px;*/
     padding: 3px;
 }
 

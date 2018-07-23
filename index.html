@@ -12,15 +12,17 @@
         <div id="wrapper">
             <nav id="navigation">
                 <!--Здесь должны быть кнопки навигации-->
-                <a href="index.html"><div class="navigation__link">Сегодня</div></a>
-                <a href="forecast.html"><div class="navigation__link">5 дней</div></a>
-                <a href="history.html"><div class="navigation__link">История погоды</div></a>
+                <ul class="navigation_ul">
+                    <a href="index.html"><li>Сегодня</li></a>
+                    <a href="forecast.html"><li>5 дней</li></a>
+                    <a href="history.html"><li>История погоды</li></a>
+                </ul>
             </nav>
 
             <div id="search-tab">
                 Загрязнение воздуха: 8.168542554e-8
                 <form name="search-tab__form" class="search-tab__form">
-                    <input name="search" type="text" placeholder="Поиск">
+                    <input name="search" type="text" placeholder="Поиск" id="search-input">
                 </form>
             </div>
 
