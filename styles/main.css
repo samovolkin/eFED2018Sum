@@ -8,25 +8,22 @@
     font-size: 13px;
 }
 
-#navigation
-{
+#navigation {
+    /*nav-блок в header*/
     border-bottom: 1px solid darkgray;
     background-color: gainsboro;
     padding: 10px 0;
 }
 
-#search-input {
-    background: lightgray;
-}
-
-.navigation_ul {
+.navigation-menu {
+    /*меню навигации*/
     margin: 0;
     font-size: 0;
     -webkit-padding-start: 12px;
 }
 
-.navigation_ul li
-{
+.navigation-menu__item {
+    /*пункт меню навигации*/
     display: inline-block;
     border: 1px solid darkgray;
     background-color: #fff;
@@ -41,11 +38,19 @@
 
 #search-tab
 {
+    /*блок с информацией о загрязнении воздуха и поисковой формой*/
     border-bottom: 1px solid darkgray;
     background-color: whitesmoke;
-    padding: 5px 7px;
-    height: 1.6em;
+    padding: 7px 7px 3px;
+    height: 2em;
+    vertical-align: middle;
     position: relative;
+}
+
+#search-tab__air-pollution-label {
+    display: inline;
+    position: relative;
+    top: 3px;
 }
 
 .search-tab__form
@@ -53,25 +58,31 @@
     display: inline-block;
     position: absolute;
     right: 20px;
+    background: lightgray;
+    border: 1px solid darkgray;
+    padding: 1px 3px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
 }
 
 .search-tab__form::before {
-    content: url("/images/ic_head_loupe.svg");
+    content: url("../images/ic_head_loupe.png");
+    display: inline-block;
     position: relative;
     top: 2px;
 }
 
-#footer
-{
+#search-input {
+    /*поисковый input*/
+    background: lightgray;
+    border: 0;
+    outline: 0;
+}
+
+#footer {
     background-color: gainsboro;
+    border-top: 1px solid darkgray;
     padding: 3px;
-}
-
-main
-{
-    border-bottom: 1px solid darkgray;
-}
-
-span.visible {
-    font-size: 12px;
 }

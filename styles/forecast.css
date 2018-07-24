@@ -1,14 +1,22 @@
 .big-table {
     margin: 5px;
+    padding: 0;
     font-size: 0;
-    border-left: 1px solid darkgrey;
     text-align: center;
 }
 
-.big-table > * {
+.big-table__column--first {
+    border-left: 1px solid darkgrey;
+}
+
+.big-table__header {
+    text-align: center;
     box-sizing: border-box;
-    border-right: 1px solid darkgrey;
-    width: 24%;
+    font-size: 12px;
+    width: 100%;
+    background-color: gainsboro;
+    border: 1px solid darkgrey;
+    padding: 3px 0;
 }
 
 .day-info {
@@ -17,11 +25,13 @@
     box-sizing: border-box;
     width: 25%;
     text-align: center;
+    border-right: 1px solid darkgrey;
     border-top: 1px solid darkgray;
 }
 
 .day-info__date {
     border-bottom: 1px solid darkgrey;
+    padding: 3px;
     text-align: center;
     height: 1.5em;
     font-size: 12px;
@@ -33,17 +43,9 @@
     font-size: 12px;
 }
 
-.big-table__header {
-    text-align: center;
-    font-size: 12px;
-    width: 100%;
-    background-color: gainsboro;
-    border-top: 1px solid darkgrey;
-    border-bottom: 1px solid darkgrey;
-    padding: 3px 0;
-}
-
 .wind-info {
+    box-sizing: border-box;
+    border-right: 1px solid darkgrey;
     padding: 0.3em;
     text-align: center;
     width: 25%;
@@ -52,7 +54,7 @@
     padding: 4px 0;
 }
 
-.wind-info span {
+.wind-info__speed {
     display: inline-block;
     background: gainsboro;
     width: 23%;
@@ -62,20 +64,27 @@
 }
 
 .fallout {
+    box-sizing: border-box;
     display: inline-block;
     font-size: 0;
     width: 25%;
+    height: 50px;
     text-align: center;
-    height: 75px;
+    border-right: 1px solid darkgrey;
     border-bottom: 1px solid darkgrey;
+    padding-top: 10px;
 }
 
-.fallout div {
+.fallout__amount {
+    box-sizing: border-box;
     display: inline-block;
     font-size: 12px;
-    width: 23%;
-    height: 26px;
-    margin: 50px 0;
+    position: relative;
+    bottom: 1px;
+    width: 25%;
+    background-color: lavender;
+    border-top: 3px solid royalblue;
+    vertical-align: bottom;
 }
 
 .center-it {
@@ -103,11 +112,15 @@ section#sun-and-moon {
     color: black;
 }
 
-.s-header {
+.sun-and-moon-header {
     border: 1px solid darkgrey;
     margin: 5px;
     margin-top: 20px;
     padding: 5px;
     background-color: gainsboro;
 
+}
+
+.sun-and-moon-header__date {
+    position: absolute;
 }

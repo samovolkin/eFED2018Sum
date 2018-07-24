@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <link rel="stylesheet" type="text/css" href="styles/reusable.css">
         <title>Погода в Ижевске</title>
     </head>
 
@@ -11,15 +12,15 @@
         <div id="wrapper">
             <nav id="navigation">
                 <!--Здесь должны быть кнопки навигации-->
-                <ul class="navigation_ul">
-                    <a href="index.html"><li>Сегодня</li></a>
-                    <a href="forecast.html"><li>5 дней</li></a>
-                    <a href="history.html"><li>История погоды</li></a>
+                <ul class="navigation-menu">
+                    <a href="index.html"><li class="navigation-menu__item">Сегодня</li></a>
+                    <a href="forecast.html"><li class="navigation-menu__item">5 дней</li></a>
+                    <a href="history.html"><li class="navigation-menu__item">История погоды</li></a>
                 </ul>
             </nav>
 
             <div id="search-tab">
-                Загрязнение воздуха: 8.168542554e-8
+                <p id="search-tab__air-pollution-label">Загрязнение воздуха: 8.168542554e-8</p>
                 <form name="search-tab__form" class="search-tab__form">
                     <input name="search" type="text" placeholder="Поиск" id="search-input">
                 </form>

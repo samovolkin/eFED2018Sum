@@ -8,9 +8,17 @@
     color: black;
 }
 
-.weather-today p,
-.weather-details p{
+.weather-today__town-label,
+.weather-today__day-label,
+.weather-today__weather-label,
+.weather-details__precipitation-label,
+.weather-details__humidity-label,
+.weather-details__wind-label {
     margin: 0.5em 0 0 0;
+}
+
+.weather-details__buttons {
+    margin-top: 2em;
 }
 
 .weather-today__img {
@@ -26,8 +34,8 @@
 
 }
 
-.weather-details button {
-    margin: 2em 0 0 0;
+.weather-details__button {
+    /*margin: 2em 0 0 0;*/
     vertical-align: middle;
     height: 50px;
     width: 100px;
@@ -77,9 +85,6 @@
     font-size: 12px;
 }
 
-.graphics-info__column
-
-.forecast-info__day
-{
+.forecast-info__day {
     margin: 0;
 }
