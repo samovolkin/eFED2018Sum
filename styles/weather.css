@@ -1,0 +1,157 @@
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+    --secondary-color-dark: rgb(177, 177, 177);
+    --primary-color-light: rgb(110, 110, 110);
+    --border-color: lightgray;
+    --primary-font: Arial, Helvetica;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    font-family: var(--primary-font);
+    box-shadow: 0 5px 10px #a1a1a1;
+}
+
+.search-input {
+    height: 3em;
+    width: 100%;
+    padding-left: 24px;
+    background-image: url("/images/sharp-search-24px.svg");
+    background-repeat: no-repeat;
+    background-position-y: 0.6em;
+    border: none;
+    box-sizing: border-box;
+}
+
+.navigation {
+    list-style: none;
+    background-color: var(--primary-color);
+    color: var(--primary-color-light);
+}
+.navigation__item {
+    padding: 1em;
+}
+
+.about-town,
+.forecast {
+    margin-top: 1.7em;
+    padding: 0.5em;
+}
+.town-name {
+    font-size: 2.5em;
+}
+
+.about-town__container {
+    display: flex;
+}
+
+
+.temperature-block {
+    display: flex;
+    align-items: center;
+    margin: 0 10vw 0 0;
+}
+
+.temperature-block__temperature {
+    font-size: 2.4em;
+}
+
+.temperature-block__cf {
+    position: relative;
+    bottom: 0.5em;
+}
+
+.forecast-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4em;
+
+    border-top: 1px solid var(--border-color);
+}
+
+.forecast-info__day-name {
+    flex: 1;
+    font-weight: 900;
+}
+
+.forecast-info__temperatures {
+    flex: 1;
+}
+
+.forecast-info__weather-type {
+    text-align: center;
+    flex: 1;
+}
+
+.forecast-info__pollen {
+    flex: 1;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);  
+}
+
+.content {
+    flex: 1;
+}
+
+.todays-date,
+.weather-type,
+.text-light {
+    color: var(--primary-color-light);
+}
+
+
+@media screen and (min-width: 767px) {
+    .navigation {
+        display: flex;
+    }
+    .header__search-form {
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    .search-input {
+        width: 25%;
+        border-left: 1px solid var(--border-color);
+    }
+    .about-town {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .forecast {
+        padding: 0 10vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .forecast-info {
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        border: none;
+    }
+
+    .forecast-info__day-name,
+    .forecast-info__weather-type,
+    .forecast-info__temperatures,
+    .forecast-info__pollen {
+        flex: 0;
+    }
+}

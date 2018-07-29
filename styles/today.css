@@ -54,10 +54,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .graphics {
-    width: 25%;
+    flex: 1 1 auto;
 }
 
 .graphics__columns {
@@ -108,5 +109,22 @@
         flex-direction: row;
         align-items: center;
         font-size: 12px;
+    }
+
+    .graphics {
+        margin: 2em 0 0 0;
+    }
+
+    .forecast {
+        flex-direction: column;
+    }
+
+    .forecast-info {
+        padding: 0 0.1em;
+    }
+
+    .forecast-info {
+        width: 100%;
+        flex-direction: row;
     }
 }
