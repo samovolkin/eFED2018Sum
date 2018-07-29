@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
-<html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="styles/main.css">
         <link rel="stylesheet" type="text/css" href="styles/today.css">
         <link rel="stylesheet" type="text/css" href="styles/reusable.css">
+        <link rel="stylesheet" type="text/css" href="styles/main-media.css">
         <title>Погода в Ижевске</title>
     </head>
 
-    <body>
-        <div id="wrapper">
-            <nav id="navigation">
-                <!--Здесь должны быть кнопки навигации-->
-                <ul class="navigation-menu">
-                    <a href="index.html"><li class="navigation-menu__item">Сегодня</li></a>
-                    <a href="forecast.html"><li class="navigation-menu__item">5 дней</li></a>
-                    <a href="history.html"><li class="navigation-menu__item">История погоды</li></a>
-                </ul>
-            </nav>
+    <body class="body">
+        
+        <nav class="navigation">
+            <!--Здесь должны быть кнопки навигации-->
+            <ul class="navigation-menu">
+                <a href="index.html"><li class="navigation-menu__item">Сегодня</li></a>
+                <a href="forecast.html"><li class="navigation-menu__item">5 дней</li></a>
+                <a href="history.html"><li class="navigation-menu__item">История погоды</li></a>
+            </ul>
+        </nav>
 
-            <div id="search-tab">
-                <p id="search-tab__air-pollution-label">Загрязнение воздуха: 8.168542554e-8</p>
-                <form name="search-tab__form" class="search-tab__form">
-                    <input name="search" type="text" placeholder="Поиск" id="search-input">
-                </form>
-            </div>
-
-            <main>
-                <section id="weather">
+        <div class="search-tab">
+            <p class="search-tab__air-pollution-label">Загрязнение воздуха: 8.168542554e-8</p>
+            <form name="search-tab__form" class="search-tab__form">
+                <input name="search" type="text" placeholder="Поиск" class="search-input">
+            </form>
+        </div>
+  
+        <main class="wrapper">
+                <section class="weather">
                     <!--Здесь будет прогноз погоды-->
                     <div class="weather-today">
                         <p class=".weather-today__town-label">Ижевск, Россия</p>
@@ -51,90 +52,201 @@
                 </section>
 
 
-                <section id="graphics">
-                    <div class="graphics-info">
-                        <div class="graphics-info__column" style="height: 30px">
-                            <span class="visible"></span></div>
-                        <div class="graphics-info__column" style="height: 10px">
-                            <span class="visible"></span></div>
-                        <div class="graphics-info__column" style="height: 20px">
-                            <span class="visible">10%</span></div>
-                        <p class="graphics-info__time">17:00</p>
+                <section class="precipitation-graphics">
+                    <div class="graphics">
+                        <div class="graphics__columns">
+                            <div class="graphics-column" style="height: 60px">
+                                <span class="graphics-column__info">
+                                    30%
+                                </span>
+                            </div>
+                            
+                            <div class="graphics-column" style="height: 20px">
+                                <span class="graphics-column__info">
+                                    10%
+                                </span>
+                            </div>
+
+                            <div class="graphics-column" style="height: 40px">
+                                <span class="graphics-column__info">
+                                    20%
+                                </span>
+                            </div>
+                        </div>
+                        <p class="graphics__time">17:00</p>
                     </div>
 
-                    <div class="graphics-info">
-                        <div class="graphics-info__column" style="height: 30px">
-                            <span class="visible"></span></div>
-                        <div class="graphics-info__column" style="height: 10px">
-                            <span class="visible"></span></div>
-                        <div class="graphics-info__column" style="height: 20px">
-                            <span class="visible"></span></div>
-                        <p class="graphics-info__time">20:00</p>
+                    <div class="graphics">
+                        <div class="graphics__columns">
+                            <div class="graphics-column" style="height: 60px">
+                                <span class="graphics-column__info">
+                                    30%
+                                </span>
+                            </div>
+                            
+                            <div class="graphics-column" style="height: 20px">
+                                <span class="graphics-column__info">
+                                    10%
+                                </span>
+                            </div>
+
+                            <div class="graphics-column" style="height: 40px">
+                                <span class="graphics-column__info">
+                                    20%
+                                </span>
+                            </div>
+                        </div>
+                        <p class="graphics__time">20:00</p>
                     </div>
 
-                    <div class="graphics-info">
-                        <div class="graphics-info__column" style="height: 30px">
-                            <span class="visible"></span></div>
-                        <div class="graphics-info__column" style="height: 10px">
-                            <span class="visible"></span></div>
-                        <div class="graphics-info__column" style="height: 20px">
-                            <span class="visible"></span></div>
-                        <p class="graphics-info__time">19:00</p>
+                    <div class="graphics">
+                        <div class="graphics__columns">
+                            <div class="graphics-column" style="height: 60px">
+                                <span class="graphics-column__info">
+                                    30%
+                                </span>
+                            </div>
+                            
+                            <div class="graphics-column" style="height: 20px">
+                                <span class="graphics-column__info">
+                                    10%
+                                </span>
+                            </div>
+
+                            <div class="graphics-column" style="height: 40px">
+                                <span class="graphics-column__info">
+                                    20%
+                                </span>
+                            </div>
+                        </div>
+                        <p class="graphics__time">23:00</p>
                     </div>
+
+                    <div class="graphics">
+                        <div class="graphics__columns">
+                            <div class="graphics-column" style="height: 60px">
+                                <span class="graphics-column__info">
+                                    30%
+                                </span>
+                            </div>
+                            
+                            <div class="graphics-column" style="height: 20px">
+                                <span class="graphics-column__info">
+                                    10%
+                                </span>
+                            </div>
+
+                            <div class="graphics-column" style="height: 40px">
+                                <span class="graphics-column__info">
+                                    20%
+                                </span>
+                            </div>
+                        </div>
+                        <p class="graphics__time">2:00</p>
+                    </div>
+
+                    <div class="graphics">
+                        <div class="graphics__columns">
+                            <div class="graphics-column" style="height: 60px">
+                                <span class="graphics-column__info">
+                                    30%
+                                </span>
+                            </div>
+                            
+                            <div class="graphics-column" style="height: 20px">
+                                <span class="graphics-column__info">
+                                    10%
+                                </span>
+                            </div>
+
+                            <div class="graphics-column" style="height: 40px">
+                                <span class="graphics-column__info">
+                                    20%
+                                </span>
+                            </div>
+                        </div>
+                        <p class="graphics__time">5:00</p>
+                    </div>
+
+                    <div class="graphics">
+                        <div class="graphics__columns">
+                            <div class="graphics-column" style="height: 60px">
+                                <span class="graphics-column__info">
+                                    30%
+                                </span>
+                            </div>
+                            
+                            <div class="graphics-column" style="height: 20px">
+                                <span class="graphics-column__info">
+                                    10%
+                                </span>
+                            </div>
+
+                            <div class="graphics-column" style="height: 40px">
+                                <span class="graphics-column__info">
+                                    20%
+                                </span>
+                            </div>
+                        </div>
+                        <p class="graphics__time">8:00</p>
+                    </div>
+
+                    <div class="graphics">
+                        <div class="graphics__columns">
+                            <div class="graphics-column" style="height: 60px">
+                                <span class="graphics-column__info">
+                                    30%
+                                </span>
+                            </div>
+                            
+                            <div class="graphics-column" style="height: 20px">
+                                <span class="graphics-column__info">
+                                    10%
+                                </span>
+                            </div>
+
+                            <div class="graphics-column" style="height: 40px">
+                                <span class="graphics-column__info">
+                                    20%
+                                </span>
+                            </div>
+                        </div>
+                        <p class="graphics__time">11:00</p>
+                    </div>
+
+                    <div class="graphics">
+                        <div class="graphics__columns">
+                            <div class="graphics-column" style="height: 60px">
+                                <span class="graphics-column__info">
+                                    30%
+                                </span>
+                            </div>
+                            
+                            <div class="graphics-column" style="height: 20px">
+                                <span class="graphics-column__info">
+                                    10%
+                                </span>
+                            </div>
+
+                            <div class="graphics-column" style="height: 40px">
+                                <span class="graphics-column__info">
+                                    20%
+                                </span>
+                            </div>
+                        </div>
+                        <p class="graphics__time">14:00</p>
+                    </div>
+
+
+
                     
-                    <div class="graphics-info">
-                        <div class="graphics-info__column" style="height: 30px">
-                            <span class="visible">30%</span></div>
-                        <div class="graphics-info__column" style="height: 10px">
-                            <span class="visible"></span></div>
-                        <div class="graphics-info__column" style="height: 20px">
-                            <span class="visible"></span></div>
-                        <p class="graphics-info__time">2:00</p>
-                    </div>
-
-                    <div class="graphics-info">
-                        <div class="graphics-info__column" style="height: 30px">
-                            <span class="visible"></span></div>
-                        <div class="graphics-info__column" style="height: 10px">
-                            <span class="visible"></span></div>
-                        <div class="graphics-info__column" style="height: 20px">
-                            <span class="visible"></span></div>
-                        <p class="graphics-info__time">5:00</p>
-                    </div>
-
-                    <div class="graphics-info">
-                        <div class="graphics-info__column" style="height: 30px">
-                            <span class="visible"></span></div>
-                        <div class="graphics-info__column" style="height: 10px">
-                            <span class="visible"></span></div>
-                        <div class="graphics-info__column" style="height: 20px">
-                            <span class="visible"></span></div>
-                        <p class="graphics-info__time">8:00</p>
-                    </div>
-
-                    <div class="graphics-info">
-                        <div class="graphics-info__column" style="height: 30px">
-                            <span class="visible"></span></div>
-                        <div class="graphics-info__column" style="height: 10px">
-                            <span class="visible"></span></div>
-                        <div class="graphics-info__column" style="height: 20px">
-                            <span class="visible"></span></div>
-                        <p class="graphics-info__time">11:00</p>
-                    </div>
+                        
                     
-                    <div class="graphics-info">
-                        <div class="graphics-info__column" style="height: 30px">
-                            <span class="visible"></span></div>
-                        <div class="graphics-info__column" style="height: 10px">
-                            <span class="visible"></span></div>
-                        <div class="graphics-info__column" style="height: 20px">
-                            <span class="visible"></span></div>
-                        <p class="graphics-info__time">14:00</p>
-                    </div>
+
+                    
                 </section>
 
-
-                <section id="forecast">
+                <section class="forecast">
                         <div class="forecast-info forecast-info--selected">
                             <p class="forecast-info__day">ср</p>
                             <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
@@ -183,11 +295,12 @@
                             <p class="forecast-info__temperature">23°C 20°C</p>
                         </div>
                 </section>
-            </main>
-            
-            <footer id="footer">
-                <center>2018 (c) Copyright</center>
-            </footer>
-        </div>
+
+            </main>  
+         
+        <footer class="footer">
+            <center>2018 (c) Copyright</center>
+        </footer>
+        
     </body>
 </html>

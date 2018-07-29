@@ -1,6 +1,12 @@
+.weather {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .weather-today,
 .weather-details {
-    display: inline-block;
     vertical-align: top;
     margin: 10px 7% 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -19,10 +25,11 @@
 
 .weather-details__buttons {
     margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
 }
 
 .weather-today__img {
-    display: inline-block;
     margin: 0.5em 1em 0 0;
 }
 
@@ -31,7 +38,6 @@
     display: inline-block;
     vertical-align: middle;
     font-size: 1.7em;
-
 }
 
 .weather-details__button {
@@ -42,49 +48,65 @@
     font-size: 12px;
 }
 
-#graphics,
-#forecast {
-    width: 700px;
-    margin: auto;
-    font-size: 0;
+.precipitation-graphics,
+.forecast {
+    margin-top: 1.3em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.graphics {
+    width: 25%;
+}
+
+.graphics__columns {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 0.5em;
+}
+
+.graphics__time {
     text-align: center;
 }
 
-#forecast {
-    margin-bottom: 20px;
+.graphics-column {
+    flex: 1;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: var(--third-color-light);
+    border-top: 3px solid var(--third-color);
 }
 
-.graphics-info,
+.graphics-column__info {
+    position: relative;
+    bottom: 1.2em;
+}
+
 .forecast-info {
-    display: inline-block;
-    width: 12%;
+    width: 102px;
+    height: 100px;
     text-align: center;
-    font-size: 0;
-    margin-left: -1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.forecast-info--selected
-{
-    border: 1px solid darkgray;
+.forecast-info__img {
+    flex: 0;
 }
 
-.graphics-info__column {
-    display: inline-block;
-    vertical-align: bottom;
-    width: 33%;
-    background-color: lavender;
-    border-top: 3px solid royalblue;
-    font-size: 0;
-    margin-left: 0px;
-    /*border-bottom: 1px solid lightskyblue;*/
+.forecast-info--selected {
+    border: 1px solid var(--border-color);
 }
 
-.graphics-info__time,
-.forecast-info__day,
-.forecast-info__temperature {
-    font-size: 12px;
-}
 
-.forecast-info__day {
-    margin: 0;
+@media only screen and (max-width : 812px) and (orientation: portrait) {
+    .precipitation-graphics {
+        flex-direction: row;
+        align-items: center;
+        font-size: 12px;
+    }
 }
