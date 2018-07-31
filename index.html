@@ -1,306 +1,219 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="styles/main.css">
-        <link rel="stylesheet" type="text/css" href="styles/today.css">
-        <link rel="stylesheet" type="text/css" href="styles/reusable.css">
-        <link rel="stylesheet" type="text/css" href="styles/main-media.css">
-        <title>Погода в Ижевске</title>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/today.css">
+    <title>Weather in Izhevsk</title>
+</head>
 
-    <body class="body">
-        
-        <nav class="navigation">
-            <!--Здесь должны быть кнопки навигации-->
-            <ul class="navigation-menu">
-                <a href="index.html"><li class="navigation-menu__item">Сегодня</li></a>
-                <a href="forecast.html"><li class="navigation-menu__item">5 дней</li></a>
-                <a href="history.html"><li class="navigation-menu__item">История погоды</li></a>
-            </ul>
+<body class="body">
+    <header class="header">
+        <nav>
+            <ol class="navigation">
+                <li class="navigation__item">Today</li>
+                <li class="navigation__item">Forecast</li>
+                <li class="navigation__item">History</li>
+            </ol>
         </nav>
+        <form class="header__search-form">
+            <input type="text" class="search-input" placeholder="Поиск">
+        </form>
+    </header>
+    
+    <main class="content">
+        <section class="about-town">
+            <h1 class="town-name">Izhevsk, Russia</h1>
+            <p class="todays-date">Tuesday, April 15th</p>
+            <p class="weather-type">Sunny</p>
+            <div class="temperature-block">
+                <img src="/assets-5days/Sunny_Weather_2@2x.png" alt="" class="temperature-block__img">
+                <span class="temperature-block__temperature">58</span>
+                <span class="temperature-block__cf">°F</span>
+            </div>
+            <div class="details">
+                <p class="details__info">
+                    <span class="text-light">Precipitation:</span> 100%</p>
+                <p class="details__info">
+                        <span class="text-light">Humidity:</span> 97%</p>
+                <p class="details__info">
+                        <span class="text-light">Wind:</span> 4 mph SW</p>
+                <p class="details__info">
+                        <span class="text-light">Pollen Count:</span> 36</p>
+            </div>
+            <div class="about-town__buttons">
+                <button class="button temperature-button">Temperature</button>
+                <button class="button precipitation-probability-button">Precipitation probability </button>
+                <button class="button wind-button">Wind</button>
+            </div>
+        </section>
 
-        <div class="search-tab">
-            <p class="search-tab__air-pollution-label">Загрязнение воздуха: 8.168542554e-8</p>
-            <form name="search-tab__form" class="search-tab__form">
-                <input name="search" type="text" placeholder="Поиск" class="search-input">
-            </form>
-        </div>
-  
-        <main class="wrapper">
-                <section class="weather">
-                    <!--Здесь будет прогноз погоды-->
-                    <div class="weather-today">
-                        <p class=".weather-today__town-label">Ижевск, Россия</p>
-                        <p class=".weather-today__day-label">среда</p>
-                        <p class=".weather-today__weather-label">облачно</p>
-                        <img src="Sunny_Weather.png" alt="облачно" class="weather-today__img">
-                        <div class="weather-today__temperature">22°C</div>
+        <section class="graph">
+            <div class="graph__part">
+                <div class="graph__columns">
+                    <div class="column" style="height: 10%;">
+                        <span class="column__label">10%</span> 
                     </div>
-                    <div class="weather-details">
-                        <p class=".weather-details__precipitation-label">Вероятность осадков: 20%</p>
-                        <p class=".weather-details__humidity-label">Влажность: 45%</p>
-                        <p class=".weather-details__wind-label">Ветер: 11 км/ч</p>
-
-                        <div class="weather-details__buttons">
-                            <button name="temperature-button" class="weather-details__button">Температура</button>
-                            <button name="precipitation-button" class="weather-details__button">Вероятность осадков</button>
-                            <button name="wind-button" class="weather-details__button">Ветер</button>
-                        </div> 
+                    <div class="column" style="height: 40%;">
+                        <span class="column__label">40%</span>
                     </div>
-                </section>
-
-
-                <section class="precipitation-graphics">
-                    <div class="graphics">
-                        <div class="graphics__columns">
-                            <div class="graphics-column" style="height: 60px">
-                                <span class="graphics-column__info">
-                                    30%
-                                </span>
-                            </div>
-                            
-                            <div class="graphics-column" style="height: 20px">
-                                <span class="graphics-column__info">
-                                    10%
-                                </span>
-                            </div>
-
-                            <div class="graphics-column" style="height: 40px">
-                                <span class="graphics-column__info">
-                                    20%
-                                </span>
-                            </div>
-                        </div>
-                        <p class="graphics__time">17:00</p>
+                    <div class="column" style="height: 30%;">
+                        <span class="column__label">30%</span>
                     </div>
-
-                    <div class="graphics">
-                        <div class="graphics__columns">
-                            <div class="graphics-column" style="height: 60px">
-                                <span class="graphics-column__info">
-                                    30%
-                                </span>
-                            </div>
-                            
-                            <div class="graphics-column" style="height: 20px">
-                                <span class="graphics-column__info">
-                                    10%
-                                </span>
-                            </div>
-
-                            <div class="graphics-column" style="height: 40px">
-                                <span class="graphics-column__info">
-                                    20%
-                                </span>
-                            </div>
-                        </div>
-                        <p class="graphics__time">20:00</p>
+                </div>
+                <div class="graph__columns">
+                    <div class="column" style="height: 10%;">
+                        <span class="column__label">10%</span> 
                     </div>
-
-                    <div class="graphics">
-                        <div class="graphics__columns">
-                            <div class="graphics-column" style="height: 60px">
-                                <span class="graphics-column__info">
-                                    30%
-                                </span>
-                            </div>
-                            
-                            <div class="graphics-column" style="height: 20px">
-                                <span class="graphics-column__info">
-                                    10%
-                                </span>
-                            </div>
-
-                            <div class="graphics-column" style="height: 40px">
-                                <span class="graphics-column__info">
-                                    20%
-                                </span>
-                            </div>
-                        </div>
-                        <p class="graphics__time">23:00</p>
+                    <div class="column" style="height: 40%;">
+                        <span class="column__label">40%</span>
                     </div>
-
-                    <div class="graphics">
-                        <div class="graphics__columns">
-                            <div class="graphics-column" style="height: 60px">
-                                <span class="graphics-column__info">
-                                    30%
-                                </span>
-                            </div>
-                            
-                            <div class="graphics-column" style="height: 20px">
-                                <span class="graphics-column__info">
-                                    10%
-                                </span>
-                            </div>
-
-                            <div class="graphics-column" style="height: 40px">
-                                <span class="graphics-column__info">
-                                    20%
-                                </span>
-                            </div>
-                        </div>
-                        <p class="graphics__time">2:00</p>
+                    <div class="column" style="height: 30%;">
+                        <span class="column__label">30%</span>
                     </div>
-
-                    <div class="graphics">
-                        <div class="graphics__columns">
-                            <div class="graphics-column" style="height: 60px">
-                                <span class="graphics-column__info">
-                                    30%
-                                </span>
-                            </div>
-                            
-                            <div class="graphics-column" style="height: 20px">
-                                <span class="graphics-column__info">
-                                    10%
-                                </span>
-                            </div>
-
-                            <div class="graphics-column" style="height: 40px">
-                                <span class="graphics-column__info">
-                                    20%
-                                </span>
-                            </div>
-                        </div>
-                        <p class="graphics__time">5:00</p>
+                </div>
+                <div class="graph__columns">
+                    <div class="column" style="height: 10%;">
+                        <span class="column__label">10%</span> 
                     </div>
-
-                    <div class="graphics">
-                        <div class="graphics__columns">
-                            <div class="graphics-column" style="height: 60px">
-                                <span class="graphics-column__info">
-                                    30%
-                                </span>
-                            </div>
-                            
-                            <div class="graphics-column" style="height: 20px">
-                                <span class="graphics-column__info">
-                                    10%
-                                </span>
-                            </div>
-
-                            <div class="graphics-column" style="height: 40px">
-                                <span class="graphics-column__info">
-                                    20%
-                                </span>
-                            </div>
-                        </div>
-                        <p class="graphics__time">8:00</p>
+                    <div class="column" style="height: 40%;">
+                        <span class="column__label">40%</span>
                     </div>
-
-                    <div class="graphics">
-                        <div class="graphics__columns">
-                            <div class="graphics-column" style="height: 60px">
-                                <span class="graphics-column__info">
-                                    30%
-                                </span>
-                            </div>
-                            
-                            <div class="graphics-column" style="height: 20px">
-                                <span class="graphics-column__info">
-                                    10%
-                                </span>
-                            </div>
-
-                            <div class="graphics-column" style="height: 40px">
-                                <span class="graphics-column__info">
-                                    20%
-                                </span>
-                            </div>
-                        </div>
-                        <p class="graphics__time">11:00</p>
+                    <div class="column" style="height: 30%;">
+                        <span class="column__label">30%</span>
                     </div>
-
-                    <div class="graphics">
-                        <div class="graphics__columns">
-                            <div class="graphics-column" style="height: 60px">
-                                <span class="graphics-column__info">
-                                    30%
-                                </span>
-                            </div>
-                            
-                            <div class="graphics-column" style="height: 20px">
-                                <span class="graphics-column__info">
-                                    10%
-                                </span>
-                            </div>
-
-                            <div class="graphics-column" style="height: 40px">
-                                <span class="graphics-column__info">
-                                    20%
-                                </span>
-                            </div>
-                        </div>
-                        <p class="graphics__time">14:00</p>
+                </div>
+                <div class="graph__columns">
+                    <div class="column" style="height: 10%;">
+                        <span class="column__label">10%</span> 
                     </div>
+                    <div class="column" style="height: 40%;">
+                        <span class="column__label">40%</span>
+                    </div>
+                    <div class="column" style="height: 30%;">
+                        <span class="column__label">30%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="graph__part">
+                <div class="graph__columns">
+                    <div class="column" style="height: 10%;">
+                        <span class="column__label">10%</span> 
+                    </div>
+                    <div class="column" style="height: 40%;">
+                        <span class="column__label">40%</span>
+                    </div>
+                    <div class="column" style="height: 30%;">
+                        <span class="column__label">30%</span>
+                    </div>
+                </div>
+                <div class="graph__columns">
+                    <div class="column" style="height: 10%;">
+                        <span class="column__label">10%</span> 
+                    </div>
+                    <div class="column" style="height: 40%;">
+                        <span class="column__label">40%</span>
+                    </div>
+                    <div class="column" style="height: 30%;">
+                        <span class="column__label">30%</span>
+                    </div>
+                </div>
+                <div class="graph__columns">
+                    <div class="column" style="height: 10%;">
+                        <span class="column__label">10%</span> 
+                    </div>
+                    <div class="column" style="height: 40%;">
+                        <span class="column__label">40%</span>
+                    </div>
+                    <div class="column" style="height: 30%;">
+                        <span class="column__label">30%</span>
+                    </div>
+                </div>
+                <div class="graph__columns">
+                    <div class="column" style="height: 10%;">
+                        <span class="column__label">10%</span> 
+                    </div>
+                    <div class="column" style="height: 40%;">
+                        <span class="column__label">40%</span>
+                    </div>
+                    <div class="column" style="height: 30%;">
+                        <span class="column__label">30%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-
-
-                    
-                        
-                    
-
-                    
-                </section>
-
-                <section class="forecast">
-                        <div class="forecast-info forecast-info--selected">
-                            <p class="forecast-info__day">ср</p>
-                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
-                            <p class="forecast-info__temperature">23°C 17°C</p>
-                        </div>
-
-                        <div class="forecast-info">
-                            <p class="forecast-info__day">чт</p>
-                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
-                            <p class="forecast-info__temperature">19°C 15°C</p>
-                        </div>
-
-                        <div class="forecast-info">
-                            <p class="forecast-info__day">пт</p>
-                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
-                            <p class="forecast-info__temperature">15°C 11°C</p>
-                        </div>
-
-                        <div class="forecast-info">
-                            <p class="forecast-info__day">сб</p>
-                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
-                            <p class="forecast-info__temperature">18°C 15°C</p>
-                        </div>
-
-                        <div class="forecast-info">
-                            <p class="forecast-info__day">вс</p>
-                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
-                            <p class="forecast-info__temperature">21°C 17°C</p>
-                        </div>
-
-                        <div class="forecast-info">
-                            <p class="forecast-info__day">пн</p>
-                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
-                            <p class="forecast-info__temperature">20°C 16°C</p>
-                        </div>
-
-                        <div class="forecast-info">
-                            <p class="forecast-info__day">вт</p>
-                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
-                            <p class="forecast-info__temperature">19°C 15°C</p>
-                        </div>
-
-                        <div class="forecast-info">
-                            <p class="forecast-info__day">ср</p>
-                            <img src="Weather_2.png" alt="дождь" class="forecast-info__img">
-                            <p class="forecast-info__temperature">23°C 20°C</p>
-                        </div>
-                </section>
-
-            </main>  
+        <section class="forecast">
+            <div class="forecast-info">
+                <p class="forecast-info__day-name">Today</p>
+                <div class="forecast-info__weather-type">
+                    <img src="/assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
+                </div>
+                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
+                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
+            </div>
+            <div class="forecast-info">
+                <p class="forecast-info__day-name">Wednesday</p>
+                <div class="forecast-info__weather-type">
+                    <img src="/assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
+                </div>
+                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
+                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
+            </div>
+            <div class="forecast-info">
+                <p class="forecast-info__day-name">Thursday</p>
+                <div class="forecast-info__weather-type">
+                    <img src="/assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
+                </div>
+                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
+                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
+            </div>
+            <div class="forecast-info">
+                <p class="forecast-info__day-name">Friday</p>
+                <div class="forecast-info__weather-type">
+                    <img src="/assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
+                </div>
+                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
+                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
+            </div>
+            <div class="forecast-info">
+                <p class="forecast-info__day-name">Saturday</p>
+                <div class="forecast-info__weather-type">
+                    <img src="/assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
+                </div>
+                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
+                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
+            </div>
+            <div class="forecast-info">
+                <p class="forecast-info__day-name">Sunday</p>
+                <div class="forecast-info__weather-type">
+                    <img src="/assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
+                </div>
+                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
+                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
+            </div>
+            <div class="forecast-info">
+                <p class="forecast-info__day-name">Monday</p>
+                <div class="forecast-info__weather-type">
+                    <img src="/assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
+                </div>
+                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
+                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
+            </div>
+            <div class="forecast-info">
+                <p class="forecast-info__day-name">Today</p>
+                <div class="forecast-info__weather-type">
+                    <img src="/assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
+                </div>
+                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
+                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
+            </div>
+        </section>
+    </main>  
          
-        <footer class="footer">
-            <center>2018 (c) Copyright</center>
-        </footer>
-        
+    <footer class="footer">
+        <center>2018 (c) Copyright</center>
+    </footer>
     </body>
 </html>

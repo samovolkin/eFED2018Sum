@@ -1,127 +1,119 @@
-@import url("../styles/themes/theme.css");
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+    --secondary-color-dark: rgb(177, 177, 177);
+    --primary-color-light: rgb(110, 110, 110);
+    --border-color: lightgray;
+    --primary-font: Arial, Helvetica;
+    --third-color: #64d3f5;
+    --third-color-dark: #1db6fd;
+}
+
 * {
     margin: 0;
     padding: 0;
-  }
-
-.body {
-    font-family: var(--font-family);
-    font-size: var(--font-size);
 }
 
-.wrapper
-{
-    border: 1px solid darkgray;
-    color: rgb(68, 68, 68);
-    font-family: 'Arial', serif ;
-    font-size: var(--font-size);
-    padding: 1em 0;
-
+.body {
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-.navigation {
-    background-color: var(--primary-color);
-    color: var(--primary-color-light);
-}
-
-.navigation-menu {
-    list-style: none;
-    line-height: 60px;
-
-    display: flex;   
-    flex-direction: row;
-    flex-wrap: wrap; 
-}
-
-.navigation-menu__item {
-    margin: 0 10px;
-    box-sizing: border-box;
-}
-
-.navigation-menu__item--selected {
-    color: white;
-}
-
-.navigation-menu__item ::hover {
-    border-bottom: 6px solid white;
-}
-
-.navigation-menu a {
-    text-decoration: none;
-}
-
-.navigation-menu a:visited {
-    text-decoration: none;
-    color: var(--primary-color-light);
-}
-
-.search-tab
-{
-    /*блок с информацией о загрязнении воздуха и поисковой формой*/
-    border-bottom: 1px solid darkgray;
-    background-color: var(--secondary-color);
-    box-shadow: 0 5px 10px var(--shadow-color);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    padding-left: 3em;
-}
-
-.search-tab__air-pollution-label {
-    align-self: center;
-}
-
-.search-tab__form
-{
-    border-left: 1px solid darkgray;
-    height: 3em;
-    /*
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px; */
+.header {
+    font-family: var(--primary-font);
+    box-shadow: 0 5px 10px #a1a1a1;
 }
 
 .search-input {
-    /*поисковый input*/
-    height: 94%;
-    background-color: var(--secondary-color);
-    background-image: url("../images/sharp-search-24px.svg");
+    height: 3em;
+    width: 100%;
+    padding-left: 24px;
+    background-image: url("/images/sharp-search-24px.svg");
     background-repeat: no-repeat;
-    background-size: 3em;
-    background-position-y: 0.2em;
-    padding-left: 3em;
-    vertical-align: middle;
+    background-position-y: 0.6em;
     border: none;
-    outline: 0;
-}
-
-.footer {
-    background-color: gainsboro;
-    padding: 3px;
-}
-
-
-
-
-.container {
-    width: 200px;
-    height: 100px;
-    margin: 0 auto;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-
-.el {
     box-sizing: border-box;
-    height: 20px;
-    border: 4px solid blue;
-    background-color: red;
+}
+
+.navigation {
+    list-style: none;
+    background-color: var(--primary-color);
+    color: var(--primary-color-light);
+}
+.navigation__item {
+    padding: 1em;
+}
+
+.content {
+    padding: 1em 0;
     flex: 1;
 }
 
+.button {
+    border: 1px solid var(--border-color);
+    background-color: var(--secondary-color);
+    flex: 1;
+    padding: 1em;
+    min-height: 2em;
+    max-height: 4em;
+}
+
+.graph {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0 0 0;
+}
+
+.graph__part {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+
+.graph__columns {
+    display: flex;   
+    align-items: flex-end;
+    flex: 1;
+}
+
+.column {
+    flex: 1;
+    background-color: var(--third-color);
+    border-top: 3px solid var(--third-color-dark);
+    text-align: center;
+}
+
+.row {
+    background-color: var(--third-color);
+    border-right: 3px solid var(--third-color-dark);
+    text-align: left;
+    padding: 0 1em;
+}
+
+.column__label {
+    position: relative;
+    bottom: 1.4em;
+    font-size: 0.9em;
+}
+
+.footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);  
+}
+
+@media screen and (min-width: 767px) {
+    .navigation {
+        display: flex;
+    }
+    .header__search-form {
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    .search-input {
+        width: 25%;
+        border-left: 1px solid var(--border-color);
+    }
+}

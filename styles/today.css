@@ -1,130 +1,139 @@
-.weather {
+.about-town {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
+    margin: 0 0.3em;
 }
 
-.weather-today,
-.weather-details {
-    vertical-align: top;
-    margin: 10px 7% 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
-    color: black;
+.town-name,
+.todays-date,
+.weather-type {
+    width: 100%;
 }
 
-.weather-today__town-label,
-.weather-today__day-label,
-.weather-today__weather-label,
-.weather-details__precipitation-label,
-.weather-details__humidity-label,
-.weather-details__wind-label {
-    margin: 0.5em 0 0 0;
+.town-name {
+    font-size: 2.5em;
 }
 
-.weather-details__buttons {
-    margin-top: 2em;
+.temperature-block {
     display: flex;
-    justify-content: space-between;
-}
-
-.weather-today__img {
-    margin: 0.5em 1em 0 0;
-}
-
-.weather-today__temperature {
-    height: 85px;
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 1.7em;
-}
-
-.weather-details__button {
-    /*margin: 2em 0 0 0;*/
-    vertical-align: middle;
-    height: 50px;
-    width: 100px;
-    font-size: 12px;
-}
-
-.precipitation-graphics,
-.forecast {
-    margin-top: 1.3em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.graphics {
-    flex: 1 1 auto;
-}
-
-.graphics__columns {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 0.5em;
-}
-
-.graphics__time {
-    text-align: center;
-}
-
-.graphics-column {
     flex: 1;
-    box-sizing: border-box;
-    text-align: center;
-    background-color: var(--third-color-light);
-    border-top: 3px solid var(--third-color);
+    align-items: center;
+    margin: 0 10vw 0 0;
 }
 
-.graphics-column__info {
+.temperature-block__temperature {
+    font-size: 2.4em;
+}
+
+.temperature-block__cf {
     position: relative;
-    bottom: 1.2em;
+    bottom: 0.5em;
+}
+
+.details {
+    min-width: 140px;
+    flex: 1;
+}
+
+.about-town__buttons {
+    margin: 1em 0 0 0;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.forecast {
+    margin-top: 1em;
+    padding: 0.5em;
 }
 
 .forecast-info {
-    width: 102px;
-    height: 100px;
-    text-align: center;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    height: 4em;
+    border-top: 1px solid var(--border-color);
 }
 
-.forecast-info__img {
-    flex: 0;
+.forecast-info__day-name {
+    flex: 1;
+    font-weight: 900;
 }
 
-.forecast-info--selected {
-    border: 1px solid var(--border-color);
+.forecast-info__wind,
+.forecast-info__precipitation,
+.forecast-info__weather-type,
+.forecast-info__pollen,
+.forecast-info__temperatures {
+    text-align: center;
+    flex: 1;
+}
+
+.todays-date,
+.weather-type,
+.text-light {
+    color: var(--primary-color-light);
+}
+
+.precipitation-probability-button {
+    border-right: none;
+    border-left: none;
+}
+.temperature-button {
+    border-left: none;
+}
+.wind-button {
+    border-right: none;
+}
+
+.forecast-info__wind {
+    background-color: var(--border-color);
+    border-top-left-radius: 90%;
+    border-bottom-right-radius: 90%;
+}
+
+.forecast-info__precipitation {
+    display: flex;
 }
 
 
-@media only screen and (max-width : 812px) and (orientation: portrait) {
-    .precipitation-graphics {
-        flex-direction: row;
-        align-items: center;
-        font-size: 12px;
+
+@media screen and (min-width: 767px) {
+    .about-town {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
-
-    .graphics {
-        margin: 2em 0 0 0;
-    }
-
     .forecast {
+        padding: 0 10vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .forecast-info {
+        height: 120px;
+        display: flex;
         flex-direction: column;
+        border: none;
+    }
+    .graph {
+        padding: 0 10vw;
     }
 
-    .forecast-info {
-        padding: 0 0.1em;
+    .forecast-info__day-name,
+    .forecast-info__weather-type,
+    .forecast-info__temperatures,
+    .forecast-info__pollen,
+    .forecast-info__wind,
+    .forecast-info__precipitation {
+        flex: 1;
     }
 
-    .forecast-info {
-        width: 100%;
-        flex-direction: row;
+    .temperature-button {
+        border-left: 1px solid var(--border-color);
+    }
+    .wind-button {
+        border-right: 1px solid var(--border-color);
     }
 }
