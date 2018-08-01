@@ -1,119 +1,115 @@
 <!DOCTYPE html>
-<html lang="ru">
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="styles/main.css">
-        <link rel="stylesheet" type="text/css" href="styles/history.css">
-        <link rel="stylesheet" type="text/css" href="styles/reusable.css">
-        <title>Погода в Ижевске</title>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/history.css">
+    <title>Weather in Izhevsk</title>
+</head>
 
-    <body>
-        <div id="wrapper">
-            <nav id="navigation">
-                <!--Здесь должны быть кнопки навигации-->
-                <ul class="navigation-menu">
-                    <a href="index.html"><li class="navigation-menu__item">Сегодня</li></a>
-                    <a href="forecast.html"><li class="navigation-menu__item">5 дней</li></a>
-                    <a href="history.html"><li class="navigation-menu__item">История погоды</li></a>
-                </ul>
-            </nav>
-
-            <div id="search-tab">
-                <p id="search-tab__air-pollution-label">Загрязнение воздуха: 8.168542554e-8</p>
-                <form name="search-tab__form" class="search-tab__form">
-                    <input name="search" type="text" placeholder="Поиск" id="search-input">
-                </form>
-            </div>
-
-            <main>
+<body class="body">
+    <header class="header">
+        <nav>
+            <ol class="navigation">
+                <li class="navigation__item"><a href="index.html">Today</a></li>
+                <li class="navigation__item"><a href="forecast.html">Forecast</a></li>
+                <li class="navigation__item navigation__item--selected"><a href="history.html">History</a></li>
+            </ol>
+        </nav>
+        <form class="header__search-form">
+            <input type="text" class="search-input" placeholder="Поиск">
+        </form>
+    </header>
+    
+    <main class="content">
+        <section class="historical-table">
                 <table class="historical-table">
-                    <tr>
-                        <td></td>
-                        <td>Январь</td>
-                        <td>Февраль</td>
-                        <td>Март</td>
-                        <td>Апрель</td>
-                        <td>Май</td>
-                        <td>Июнь</td>
-                        <td>Июль</td>
-                        <td>Август</td>
-                        <td>Сентябрь</td>
-                        <td>Октябрь</td>
-                        <td>Ноябрь</td>
-                        <td>Декабрь</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Средний максимум</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Средний минимум</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                    </tr>
-            
-                    <tr>
-                        <td>Рекордный максимум</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                    </tr>
-            
-                    <tr>
-                        <td>Рекордный минимум</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                        <td>-5</td>
-                        <td>-9</td>
-                    </tr>
-                </table>
-            </main>
-            
-            <footer id="footer">
-                <center>2018 (c) Copyright</center>
-            </footer>
-        </div>
+                        <thead>
+                          <tr>
+                            <th> </th>
+                            <th>January</th>
+                            <th>February</th>
+                            <th>March</td>
+                            <th>April</th>
+                            <th>May</th>
+                            <th>June</th>
+                            <th>July</th>
+                            <th>August</th>
+                            <th>September</th>
+                            <th>October</th>
+                            <th>November</th>
+                            <th>December</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Average maximum</td>
+                            <td>-9°</td>
+                            <td>-8°</td>
+                            <td>-1°</td>
+                            <td>7°</td>
+                            <td>18°</td>
+                            <td>23°</td>
+                            <td>25°</td>
+                            <td>22°</td>
+                            <td>15°</td>
+                            <td>7°</td>
+                            <td>-2°</td>
+                            <td>-7°</td>
+                          </tr>
+                          <tr>
+                            <td>Average minimum</td>
+                            <td>-9°</td>
+                            <td>7°</td>
+                            <td>18°</td>
+                            <td>23°</td>
+                            <td>-8°</td>
+                            <td>-1°</td>
+                            <td>7°</td>
+                            <td>15°</td>
+                            <td>25°</td>
+                            <td>22°</td>
+                            <td>-2°</td>
+                            <td>-7°</td>
+                          </tr>
+                          <tr>
+                            <td>Record maximum</td>
+                            <td>-9°</td>
+                            <td>7°</td>
+                            <td>18°</td>
+                            <td>23°</td>
+                            <td>-8°</td>
+                            <td>-1°</td>
+                            <td>7°</td>
+                            <td>15°</td>
+                            <td>25°</td>
+                            <td>22°</td>
+                            <td>-2°</td>
+                            <td>-7°</td>
+                          </tr>
+                          <tr>
+                            <td>Record minimum</td>
+                            <td>-9°</td>
+                            <td>7°</td>
+                            <td>18°</td>
+                            <td>23°</td>
+                            <td>-8°</td>
+                            <td>-1°</td>
+                            <td>7°</td>
+                            <td>15°</td>
+                            <td>25°</td>
+                            <td>22°</td>
+                            <td>-2°</td>
+                            <td>-7°</td>
+                          </tr>
+                        </tbody>
+                      </table>
+            </section>
+        </main>
+        
+<footer class="footer">
+        <center>2018 (c) Copyright</center>
+    </footer>
     </body>
 </html>

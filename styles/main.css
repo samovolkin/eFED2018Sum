@@ -9,6 +9,11 @@
     --third-color-dark: #1db6fd;
 }
 
+a {
+    text-decoration: none;
+    color: var(--primary-color-light);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -43,6 +48,10 @@
 }
 .navigation__item {
     padding: 1em;
+}
+
+.navigation__item--selected a{
+    color: var(--secondary-color);
 }
 
 .content {
@@ -103,6 +112,55 @@
     color: var(--secondary-color);  
 }
 
+.forecast {
+    margin-top: 1em;
+    padding: 0.5em;
+}
+
+.forecast-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4em;
+    border-top: 1px solid var(--border-color);
+}
+
+.forecast-info__day-name {
+    flex: 1;
+    font-weight: 900;
+}
+
+.forecast-info__wind,
+.forecast-info__precipitation,
+.forecast-info__weather-type,
+.forecast-info__pollen,
+.forecast-info__temperatures {
+    text-align: center;
+    flex: 1;
+}
+
+.todays-date,
+.weather-type,
+.text-light {
+    color: var(--primary-color-light);
+}
+
+.precipitation-probability-button {
+    border-right: none;
+    border-left: none;
+}
+
+
+.forecast-info__wind {
+    background-image: url("images/wind-rectangle.svg");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+}
+
+.forecast-info__precipitation {
+    display: flex;
+}
+
 @media screen and (min-width: 767px) {
     .navigation {
         display: flex;
@@ -116,4 +174,6 @@
         width: 25%;
         border-left: 1px solid var(--border-color);
     }
+
+    
 }

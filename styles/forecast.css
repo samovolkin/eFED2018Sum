@@ -1,49 +1,186 @@
+.forecast-info__day-name {
+    padding-left: 1em;
+}
+
+.forecast-info--first {
+    border-top: none;
+}
 .day-forecast__date {
     text-align: center;
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
 
-@media screen and (min-width: 767px) {
+.table__header {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    border-right: 1px solid var(--border-color);
+}
+
+.sun-and-moon {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0em 0.2em;
+}
+.sun {
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 2em 0;
+}
+
+.sun__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 0.7em;
+    font-weight: 700;
+}
+
+.sun__day-length {
+    margin: 0.3em 0 0 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.moon {
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 2em 0;
+}
+
+.moon__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 0.7em;
+    font-weight: 700;
+}
+
+.moon__day-length {
+    margin: 0.3em 0 0 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.sun-and-moon__header {
+    width: 100%;
+    padding: 1em 20%;
+    margin: 0 0 0.7em 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.sun-and-moon__date {
+    font-weight: 800;
+}
+
+@media screen and (min-width: 1120px) {
     .table {
         display: flex;
         flex-direction: row;
         align-items: stretch;
-        justify-content: center; 
-        height: 500px;
-        
+        justify-content: center;
+        border-left: 1px solid var(--border-color);
     }
-    .day-forecast__forecast {
+
+    .forecast {
+        padding: 0 10vw;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
+
     .forecast-info {
-        font-size: 0.9em;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        border: none;
     }
-    .forecast-info__wind-label {
+
+    .graph {
+        padding: 0 10vw;
+    }
+
+    .forecast-info__day-name,
+    .forecast-info__weather-type,
+    .forecast-info__temperatures,
+    .forecast-info__pollen,
+    .forecast-info__wind,
+    .forecast-info__precipitation {
         flex: 1;
-        height: 2em;
-        width: 100%;
-        background-color: var(--border-color);
     }
-    .day-forecast__forecast {
+
+    .temperature-button {
+        border-left: 1px solid var(--border-color);
+    }
+
+    .wind-button {
         border-right: 1px solid var(--border-color);
     }
-    .forecast-info__precipitation {
+
+    .day-forecast__forecast {
+        height: 200px;
         display: flex;
+        border-right: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+    }
+    .forecast-info {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .forecast-info__day-name {
+        padding: 0.5em 0.4em;
+    }
+    .forecast-info__precipitation {
+        padding: 0.4em 0 0 0;
+    }
+    .forecast-info__wind {
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+        flex: 0;
+        width: 100%;
+        padding: 1em 0;
+        background-position-y: 0.8em;
+    }
+    .row {
+        margin: 0 auto;
+        border: none;
+        text-align: center;
+        border-top: 3px solid var(--third-color-dark);
+    }
+    .forecast-info__temperatures {
+        flex: 0;
+        padding: 0.4em;
+    }
+    .table__header {
+        visibility: visible;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        border: none;
+        background-image: none;
+        height: unset;
+        width: unset;
+    }
+
+    .sun-and-moon {
         justify-content: center;
     }
 
-    .forecast-info__wind-label--here {
-        content: "Maximum wind speed";
+    .sun-and-moon__header {
+        display: flex;
     }
 
-    .forecast-info__wind {
-        height: 2em;
-    }
-    .row {
-        border: none;
-        text-align: center;
-        width: 100%;
-        border-top: 3px solid var(--third-color-dark);
+    .sun-and-moon__name {
+        position: absolute;
+        right: 45%;
     }
 }
