@@ -152,7 +152,7 @@ a {
 
 
 .forecast-info__wind {
-    background-image: url("images/wind-rectangle.svg");
+    background-image: url("/images/wind-rectangle.svg");
     background-repeat: no-repeat;
     background-position-x: 50%;
 }
