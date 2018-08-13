@@ -1,0 +1,25 @@
+.graph-container {
+    display: flex;
+    border: 1px solid red;
+}
+
+.column {
+    border-top: 3px solid var(--column-border, black);
+    background-color: green;
+    flex: 1;
+    text-align: center;
+    align-self: flex-end;
+}
+
+.row {
+    border-right: 3px solid var(--row-border, black);
+    align-self: center;
+    background-color: green;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+}

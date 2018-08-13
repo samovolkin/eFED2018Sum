@@ -43,6 +43,18 @@
     justify-content: center;
 }
 
+.time-row {
+    width: 100%;
+    text-align: center;
+}
+
+.precipitation-probability-graph {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
 @media screen and (min-width: 767px) {
     .about-town {
         width: 90%;

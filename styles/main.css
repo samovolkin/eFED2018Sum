@@ -70,20 +70,15 @@ a {
 
 .graph {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     margin: 1em 0 0 0;
 }
 
 .graph__part {
+    margin: 1em 0;
     display: flex;
-    flex-direction: row;
-    height: 50px;
-}
-
-.graph__columns {
-    display: flex;   
+    flex-wrap: wrap;
     align-items: flex-end;
-    flex: 1;
 }
 
 .column {
