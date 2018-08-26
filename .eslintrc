@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": true
+        },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 2017,
+        "sourceType": "module"
+        },
+    "rules": {
+        "indent": ["error", 4],
+        "linebreak-style": ["error", "windows"],
+        "semi": ["error", "always"],
+        "no-console": ["off"],
+        "no-undef": ["off"],
+        "no-constant-condition": ["off"],
+        "no-unused-vars": ["off"],
+        "no-useless-escape": ["off"]
+    }
+}
+    
