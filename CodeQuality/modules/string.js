@@ -3,7 +3,9 @@ export function countChar(str, char) {
     char = char.toLowerCase();
     
     var count = 0;
-    for (let symbol in str) if (str[symbol] == char) count++;
+    for (var symbol in str) { 
+        if (str[symbol] == char) count++;
+    }
 
     return count;
 }

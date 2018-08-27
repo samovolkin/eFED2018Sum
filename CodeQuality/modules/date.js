@@ -23,6 +23,7 @@ export function getNames(date) {
     );
 }
 
-export function differenceInYears(dateA, dateB) {
-    return (Math.abs(dateA - dateB) / 1000 / 3600 / 24 / 365).toFixed(1);
+export function differenceInYears(dateA, dateB, round=1) {
+    var millisecondsInYear = 31536000000;
+    return (Math.abs(dateA - dateB) / millisecondsInYear).toFixed(round);
 }

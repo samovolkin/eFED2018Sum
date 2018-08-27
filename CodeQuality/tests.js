@@ -1,7 +1,7 @@
 import * as common from "./modules/common.js";
 import * as str from "./modules/string.js";
-import * as arr from "./modules/array.js";
-import * as weather from "./modules/weather.js";
+import * as arr from "./modules/array.mjs";
+import * as weather from "./modules/weather.mjs";
 import * as dt from "./modules/date.js";
 
 
