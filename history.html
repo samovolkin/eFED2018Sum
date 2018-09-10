@@ -3,113 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <link rel="stylesheet" type="text/css" href="styles/history.css">
-    <title>Weather in Izhevsk</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/visual/main.css">
+    <link rel="stylesheet" href="./styles/visual/history/table.css">
+    <title>Weather</title>
+
+    
 </head>
 
 <body class="body">
     <header class="header">
-        <nav>
-            <ol class="navigation">
-                <li class="navigation__item"><a href="index.html">Today</a></li>
-                <li class="navigation__item"><a href="forecast.html">Forecast</a></li>
-                <li class="navigation__item navigation__item--selected"><a href="history.html">History</a></li>
-            </ol>
+        <nav class="navigation">
+            <a href="index.html" class="navigation__link">Today</a>
+            <a href="forecast.html" class="navigation__link">Forecast</a>
+            <a href="history.html" class="navigation__link navigation__link--active">History</a>
         </nav>
-        <form class="header__search-form">
-            <input type="text" class="search-input" placeholder="Поиск">
-        </form>
     </header>
-    
-    <main class="content">
-        <section class="historical-table">
-                <table class="historical-table">
-                        <thead>
-                          <tr>
-                            <th> </th>
-                            <th>January</th>
-                            <th>February</th>
-                            <th>March</td>
-                            <th>April</th>
-                            <th>May</th>
-                            <th>June</th>
-                            <th>July</th>
-                            <th>August</th>
-                            <th>September</th>
-                            <th>October</th>
-                            <th>November</th>
-                            <th>December</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Average maximum</td>
-                            <td>-9°</td>
-                            <td>-8°</td>
-                            <td>-1°</td>
-                            <td>7°</td>
-                            <td>18°</td>
-                            <td>23°</td>
-                            <td>25°</td>
-                            <td>22°</td>
-                            <td>15°</td>
-                            <td>7°</td>
-                            <td>-2°</td>
-                            <td>-7°</td>
-                          </tr>
-                          <tr>
-                            <td>Average minimum</td>
-                            <td>-9°</td>
-                            <td>7°</td>
-                            <td>18°</td>
-                            <td>23°</td>
-                            <td>-8°</td>
-                            <td>-1°</td>
-                            <td>7°</td>
-                            <td>15°</td>
-                            <td>25°</td>
-                            <td>22°</td>
-                            <td>-2°</td>
-                            <td>-7°</td>
-                          </tr>
-                          <tr>
-                            <td>Record maximum</td>
-                            <td>-9°</td>
-                            <td>7°</td>
-                            <td>18°</td>
-                            <td>23°</td>
-                            <td>-8°</td>
-                            <td>-1°</td>
-                            <td>7°</td>
-                            <td>15°</td>
-                            <td>25°</td>
-                            <td>22°</td>
-                            <td>-2°</td>
-                            <td>-7°</td>
-                          </tr>
-                          <tr>
-                            <td>Record minimum</td>
-                            <td>-9°</td>
-                            <td>7°</td>
-                            <td>18°</td>
-                            <td>23°</td>
-                            <td>-8°</td>
-                            <td>-1°</td>
-                            <td>7°</td>
-                            <td>15°</td>
-                            <td>25°</td>
-                            <td>22°</td>
-                            <td>-2°</td>
-                            <td>-7°</td>
-                          </tr>
-                        </tbody>
-                      </table>
+
+
+    <section class="wrapper">
+        <section class="search-tab">
+            <input type="text" id="search-input" placeholder="Search">
+        </section>
+        <main class="main">
+            <section class="table">
+                <div class="row">
+                    <div class="row__cell"></div>
+                    <div class="row__cell">January</div>
+                    <div class="row__cell">February</div>
+                    <div class="row__cell">March</div>
+                    <div class="row__cell">April</div>
+                    <div class="row__cell">May</div>
+                    <div class="row__cell">June</div>
+                    <div class="row__cell">July</div>
+                    <div class="row__cell">August</div>
+                    <div class="row__cell">September</div>
+                    <div class="row__cell">October</div>
+                    <div class="row__cell">November</div>
+                    <div class="row__cell">December</div>
+                </div>
+                <div class="row average-maximum">
+                    <div class="row__cell">Average maximum</div>
+                    <div class="row__cell"></div>
+                    <div class="row__cell"></div>
+                    <div class="row__cell"></div>
+                    <div class="row__cell"></div>
+                    <div class="row__cell"></div>
+                    <div class="row__cell"></div>
+                    <div class="row__cell"></div>
+                    <div class="row__cell"></div>
+                    <div class="row__cell"></div>
+                    <div class="row__cell"></div>
+                    <div class="row__cell"></div>
+                    <div class="row__cell"></div>
+                </div>
             </section>
         </main>
-        
-<footer class="footer">
-        <center>2018 (c) Copyright</center>
-    </footer>
-    </body>
+    </section>
+</body>
 </html>
+
+<script src="./js/render.js"></script>
+<script src="./mocks/HistoricalReviewMock.js"></script>
+<script>
+    var mock = historicalReviewMock.Izhevsk;
+    var dat = historicalReviewMock['Izhevsk'].reduce(function(previousYear, currentYear) {
+        for(var i = 0; i < 12; i++) {
+            previousYear[i].min = (previousYear[i].min < currentYear[i].min)? previousYear[i].min : currentYear[i].min;
+            previousYear[i].max = (previousYear[i].max > currentYear[i].max)? previousYear[i].max : currentYear[i].max;
+        }
+        return previousYear;
+    }, mock['1960']);
+
+</script>
+
+
+
+

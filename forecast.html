@@ -3,351 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <link rel="stylesheet" type="text/css" href="styles/forecast.css">
-    <link rel="stylesheet" href="styles/iconmonstr-iconic-font-1.3.0/css/iconmonstr-iconic-font.css">
-    <title>Weather in Izhevsk</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/visual/main.css">
+    <link rel="stylesheet" href="./styles/visual/graphics.css">
+    <link rel="stylesheet" href="./styles/visual/forecast-page/forecast-table.css">
+    <title>Weather</title>
 </head>
 
 <body class="body">
     <header class="header">
-        <nav>
-            <ol class="navigation">
-                <li class="navigation__item"><a href="index.html">Today</a></li>
-                <li class="navigation__item navigation__item--selected"><a href="forecast.html">Forecast</a></li>
-                <li class="navigation__item"><a href="history.html">History</a></li>
-            </ol>
+        <nav class="navigation">
+            <a href="index.html" class="navigation__link">Today</a>
+            <a href="forecast.html" class="navigation__link navigation__link--active">Forecast</a>
+            <a href="history.html" class="navigation__link">History</a>
         </nav>
-        <form class="header__search-form">
-            <input type="text" class="search-input" placeholder="Поиск">
-        </form>
     </header>
-    
-    <main class="content">
-        <section class="sun-and-moon">
-            <div class="sun-and-moon__header">
-                <span class="sun-and-moon__date">Пятница, 18 мая, сегодня</span>
-                <div class="sun-and-moon__name">Солнце и луна</div>
-            </div>
-            <div class="sun">
-                <img src="assets-5days/Sun.png" alt="sun" class="sun_img">
-                <div class="sun__info">
-                    <p>Длина дня - 16 ч 43 мин</p>
-                    <p>Восход - 4:02</p>
-                    <p>Заход - 20:45</p>
-                </div>
-                <p class="sun__day-length">Сегодня день на 2 минуты длиннее, чем вчера</p>
-            </div>
-            <div class="moon">
-                <img src="assets-5days/Moon.png" alt="moon" class="sun_img">
-                <div class="moon__info">
-                    <p>Луна растущая - 19%</p>
-                    <p>Восход - 7:40</p>
-                    <p>Заход - 10:58</p>
-                </div>
-                <p class="moon__day-length">Полнолуние - 28 июня, через 23 дня</p>
-            </div>
+
+
+    <section class="wrapper">
+        <section class="search-tab">
+            <input type="text" id="search-input" placeholder="Search">
         </section>
-        <section class="table">
-            <div class="slider-buttons">
-                <div class="slider-button im im-angle-left"></div>
-                <div class="slider-navigation">
-                    <div class="slider-navigation__button slider-navigation__button--selected">18</div>
-                    <div class="slider-navigation__button">19</div>
-                    <div class="slider-navigation__button">20</div>
-                    <div class="slider-navigation__button">21</div>
-                    <div class="slider-navigation__button">22</div>
-                </div>
-                <div class="slider-button im im-angle-right"></div>
-            </div>
-            <div class="day-forecast active">
-                <div class="day-forecast__date">Today, 18</div>
-                <div class="day-forecast__forecast">
-                    <div class="forecast-info table__header forecast-info--first">
-                        <p class="forecast-info__day-name table__header">Phase</p>
-                        <div class="forecast-info__weather-type table__header">Weather</div>
-                        <p class="forecast-info__temperatures table__header">Temperature</p>
-                        <div class="forecast-info__wind table__header">Wind</div>
-                        <div class="forecast-info__precipitation table__header">
-                            <div class="table__header">Precipitation</div>
-                        </div>
+        <main class="main">
+            <section class="forecast-table">
+                <div class="day-forecast">
+                    <div class="day-forecast__day">Пт, 18 мая</div>
+                    <div class="details">
+                        <div class="details__phase">Ночь</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                    <div class="forecast-info forecast-info--first">
-                        <p class="forecast-info__day-name">Ночь</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 9%">9</div>
-                        </div>
+                    <div class="details">
+                        <div class="details__phase">Утро</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                    <div class="forecast-info">
-                        <p class="forecast-info__day-name">Утро</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 1%">1</div>
-                        </div>
+                    <div class="details">
+                        <div class="details__phase">День</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                    <div class="forecast-info">
-                        <p class="forecast-info__day-name">День</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 4%">4</div>
-                        </div>
-                    </div>
-                    <div class="forecast-info">
-                        <p class="forecast-info__day-name">Вечер</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 12%">12</div>
-                        </div>
+                    <div class="details">
+                        <div class="details__phase">Вечер</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
                 </div>
-            </div>
-            <div class="day-forecast">
-                <div class="day-forecast__date">Friday, 19</div>
-                <div class="day-forecast__forecast">
-                    <div class="forecast-info forecast-info--first">
-                        <p class="forecast-info__day-name">Ночь</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 9%">9</div>
-                        </div>
+                <div class="day-forecast">
+                    <div class="day-forecast__day">Пт, 18 мая</div>
+                    <div class="details">
+                        <div class="details__phase">Ночь</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                    <div class="forecast-info">
-                        <p class="forecast-info__day-name">Утро</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 1%">1</div>
-                        </div>
+                    <div class="details">
+                        <div class="details__phase">Утро</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                    <div class="forecast-info">
-                        <p class="forecast-info__day-name">День</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 4%">4</div>
-                        </div>
+                    <div class="details">
+                        <div class="details__phase">День</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                    <div class="forecast-info">
-                        <p class="forecast-info__day-name">Вечер</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 12%">12</div>
-                        </div>
+                    <div class="details">
+                        <div class="details__phase">Вечер</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
                 </div>
-            </div>
-            <div class="day-forecast">
-                <div class="day-forecast__date">Saturday, 20</div>
-                <div class="day-forecast__forecast">
-                    <div class="forecast-info forecast-info--first">
-                        <p class="forecast-info__day-name">Ночь</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 9%">9</div>
-                        </div>
+                <div class="day-forecast">
+                    <div class="day-forecast__day">Пт, 18 мая</div>
+                    <div class="details">
+                        <div class="details__phase">Ночь</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                    <div class="forecast-info">
-                        <p class="forecast-info__day-name">Утро</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 1%">1</div>
-                        </div>
+                    <div class="details">
+                        <div class="details__phase">Утро</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                    <div class="forecast-info">
-                        <p class="forecast-info__day-name">День</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 4%">4</div>
-                        </div>
+                    <div class="details">
+                        <div class="details__phase">День</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                    <div class="forecast-info">
-                        <p class="forecast-info__day-name">Вечер</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 12%">12</div>
-                        </div>
+                    <div class="details">
+                        <div class="details__phase">Вечер</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
                 </div>
-            </div>
-            <div class="day-forecast">
-                <div class="day-forecast__date">Sunday, 21</div>
-                <div class="day-forecast__forecast">
-                    <div class="forecast-info forecast-info--first">
-                        <p class="forecast-info__day-name">Ночь</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 9%">9</div>
-                        </div>
+                <div class="day-forecast">
+                    <div class="day-forecast__day">Пт, 18 мая</div>
+                    <div class="details">
+                        <div class="details__phase">Ночь</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                    <div class="forecast-info">
-                        <p class="forecast-info__day-name">Утро</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 1%">1</div>
-                        </div>
+                    <div class="details">
+                        <div class="details__phase">Утро</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                    <div class="forecast-info">
-                        <p class="forecast-info__day-name">День</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 4%">4</div>
-                        </div>
+                    <div class="details">
+                        <div class="details__phase">День</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                    <div class="forecast-info">
-                        <p class="forecast-info__day-name">Вечер</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 12%">12</div>
-                        </div>
+                    <div class="details">
+                        <div class="details__phase">Вечер</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
                 </div>
-            </div>
-            <div class="day-forecast">
-                <div class="day-forecast__date">Monday, 22</div>
-                <div class="day-forecast__forecast">
-                    <div class="forecast-info forecast-info--first">
-                        <p class="forecast-info__day-name">Ночь</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 9%">9</div>
-                        </div>
+                <div class="day-forecast">
+                    <div class="day-forecast__day">Пт, 18 мая</div>
+                    <div class="details">
+                        <div class="details__phase">Ночь</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                    <div class="forecast-info">
-                        <p class="forecast-info__day-name">Утро</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 1%">1</div>
-                        </div>
+                    <div class="details">
+                        <div class="details__phase">Утро</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                    <div class="forecast-info">
-                        <p class="forecast-info__day-name">День</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 4%">4</div>
-                        </div>
+                    <div class="details">
+                        <div class="details__phase">День</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                    <div class="forecast-info">
-                        <p class="forecast-info__day-name">Вечер</p>
-                        <div class="forecast-info__weather-type">
-                            <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                        </div>
-                        <p class="forecast-info__temperatures"><span class="text-light">68°</span></p>
-                        <div class="forecast-info__wind">1</div>
-                        <div class="forecast-info__precipitation">
-                            <div class="row" style="width: 12%">12</div>
-                        </div>
+                    <div class="details">
+                        <div class="details__phase">Вечер</div>
+                        <div class="details__temperature">8</div>
+                        <div class="details__wind">5</div>
+                        <div class="details__rain">0</div>
                     </div>
-                </div>
-            </div>
-        </section>
-    </main>  
-         
-    <footer class="footer">
-        <center>2018 (c) Copyright</center>
-    </footer>
-    </body>
+                </div> 
+            </section>
+        </main>
+    </section>
+</body>
 </html>
 
-<script>
-    var slider = document.querySelector('.table');
-    slider.slides = slider.querySelectorAll('.day-forecast');
-    slider.index = 0;
-    slider.buttons = slider.querySelectorAll('.slider-navigation__button');
-    slider.showSlide = function(index) {
-        this.slides[this.index].classList.remove('active');
-        this.buttons[this.index].classList.remove('slider-navigation__button--selected');
-        this.index = index;
-        this.slides[this.index].classList.add('active');
-        this.buttons[this.index].classList.add('slider-navigation__button--selected');
-    };
+<script src="./js/render.js"></script>
+<script src="./js/business/forecast.js"></script>
+<script src="./js/business/todayData.js"></script>
+<script src="./js/business/daily.js"></script>
+<script src="./js/forecast.js"></script>
 
-    slider.onclick = function(event) {
-        if (event.target.classList.contains('im-angle-right'))
-            (this.index == this.slides.length - 1)? this.showSlide(0) : this.showSlide(this.index + 1);
-            
-        if (event.target.classList.contains('im-angle-left'))
-            (this.index == 0)? this.showSlide(this.slides.length - 1) : this.showSlide(this.index - 1);
-
-        if (event.target.classList.contains('slider-navigation__button')) {
-            var i = Array.prototype.indexOf.call(this.buttons, event.target);
-            if (i == -1) return;
-            this.showSlide(i);
-        }
-    };
-
-</script>

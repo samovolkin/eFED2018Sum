@@ -1,0 +1,9 @@
+.wind-info {
+    flex: 1;
+    height: 50%;
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

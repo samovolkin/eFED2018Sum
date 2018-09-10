@@ -1,0 +1,8 @@
+.forecast {
+    display: flex;
+    flex-direction: row;
+}
+
+.forecast-item {
+    flex: 1;
+}

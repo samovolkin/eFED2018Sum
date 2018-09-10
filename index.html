@@ -3,344 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <link rel="stylesheet" type="text/css" href="styles/today.css">
-    <link rel="stylesheet" href="styles/iconmonstr-iconic-font-1.3.0/css/iconmonstr-iconic-font.css">
-
-    <title>Weather in Izhevsk</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/visual/main.css">
+    <link rel="stylesheet" href="./styles/visual/today-page/basic-weather-data.css">
+    <link rel="stylesheet" href="./styles/visual/today-page/forecast.css">
+    <link rel="stylesheet" href="./styles/visual/graphics.css">
+    <link rel="stylesheet" href="./styles/visual/today-page/wind-graphic.css">
+    <link rel="stylesheet" href="./styles/visual/today-page/tabber.css">
+    <title>Weather</title>
 </head>
 
 <body class="body">
-    <!--<div class="im im-angle-right" style="font-size: 5em;"></div>-->
     <header class="header">
-        <nav>
-            <ol class="navigation">
-                <li class="navigation__item navigation__item--selected"><a href="index.html">Today</a></li>
-                <li class="navigation__item"><a href="forecast.html">Forecast</a></li>
-                <li class="navigation__item"><a href="history.html">History</a></li>
-            </ol>
+        <nav class="navigation">
+            <a href="index.html" class="navigation__link navigation__link--active">Today</a>
+            <a href="forecast.html" class="navigation__link">Forecast</a>
+            <a href="history.html" class="navigation__link">History</a>
         </nav>
-        <form class="header__search-form">
-            <input type="text" class="search-input" placeholder="Поиск">
-        </form>
     </header>
-    
-    <main class="content">
-        <section class="about-town">
-            <h1 class="town-name">Izhevsk, Russia</h1>
-            <p class="todays-date">Tuesday, April 15th</p>
-            <p class="weather-type">Sunny</p>
-            <div class="temperature-block">
-                <img src="assets-5days/Sunny_Weather_2@2x.png" alt="" class="temperature-block__img">
-                <span class="temperature-block__temperature">58</span>
-                <span class="temperature-block__cf">°F</span>
-            </div>
-            <div class="details">
-                <p class="details__info">
-                    <span class="text-light">Precipitation:</span> 100%</p>
-                <p class="details__info">
-                        <span class="text-light">Humidity:</span> 97%</p>
-                <p class="details__info">
-                        <span class="text-light">Wind:</span> 4 mph SW</p>
-                <p class="details__info">
-                        <span class="text-light">Pollen Count:</span> 36</p>
-            </div>
-            
-        </section>
-        <section class="tabber">
-            <div class="about-town__buttons">
-                <button class="button temperature-button button--selected">Temperature</button>
-                <button class="button precipitation-probability-button">Precipitation probability </button>
-                <button class="button wind-button">Wind</button>
-            </div>
 
-            <section class="graph temperature-section active">
-                <div class="graph__part">
-                    <div class="temperature-info">
-                        <div class="column temperature-graph" style="height: 14px;">
-                            <span class="column__label">14</span>
-                        </div>
-                        <div>17:00</div>
-                    </div>
-                    <div class="temperature-info">
-                        <div class="column temperature-graph" style="height: 10px;">
-                            <span class="column__label">10</span>
-                        </div>
-                        <div>21:00</div>
-                    </div> 
-                    <div class="temperature-info">
-                        <div class="column temperature-graph" style="height: 17px;">
-                            <span class="column__label">17</span>
-                        </div>
-                        <div>1:00</div>
-                    </div> 
-                    <div class="temperature-info">
-                        <div class="column temperature-graph"><span class="column__label">14</span></div>
-                        <div>5:00</div>
-                    </div> 
-                </div>
-                <div class="graph__part">
-                    <div class="temperature-info">
-                        <div class="column temperature-graph"><span class="column__label">14</span></div>
-                        <div>9:00</div>
-                    </div>
-                    <div class="temperature-info">
-                        <div class="column temperature-graph" style="height: 10px;">
-                            <span class="column__label">10</span>
-                        </div>
-                        <div>13:00</div>
-                    </div> 
-                    <div class="temperature-info">
-                        <div class="column temperature-graph"><span class="column__label">14</span></div>
-                        <div>17:00</div>
-                    </div> 
-                    <div class="temperature-info">
-                        <div class="column temperature-graph" style="height: 9px;">
-                            <span class="column__label">9</span>
-                        </div>
-                        <div>21:00</div>
-                    </div> 
+
+    <section class="wrapper">
+        <section class="search-tab">
+            <input type="text" id="search-input" placeholder="Search">
+        </section>
+        <main class="main">
+            <section class="basic-weather-data">
+                <div class="basic-weather">
+                    <h1 class="basic-weather__town-name">Izhevsk, RU</h1>
+                    <p class="basic-weather__day-name">wednesday</p>
+                    <p class="basic-weather__weather-type">cloudy</p>
+                    <div class="basic-weather__temperature">22°C</div>
                 </div>
             </section>
 
-            <section class="graph precipitation-probability-block">
-                <div class="graph__part">
-                    <div class="precipitation-probability-graph">
-                        <div class="column" style="height: 10px;">
-                            <span class="column__label">10</span>
-                        </div>
-                        <div class="column" style="height: 30px;">
-                            <span class="column__label">30</span>
-                        </div>
-                        <div class="column" style="height: 20px;">
-                            <span class="column__label">20</span>
-                        </div>
-                        <div class="time-row">17:00</div>
-                    </div>
-                    <div class="precipitation-probability-graph">
-                        <div class="column" style="height: 21px;">
-                            <span class="column__label">21</span>
-                        </div>
-                        <div class="column" style="height: 30px;">
-                            <span class="column__label">30</span>
-                        </div>
-                        <div class="column" style="height: 25px;">
-                            <span class="column__label">25</span>
-                        </div>
-                        <div class="time-row">17:00</div>
-                    </div>
-                    <div class="precipitation-probability-graph">
-                        <div class="column" style="height: 17px;">
-                            <span class="column__label">17</span>
-                        </div>
-                        <div class="column" style="height: 15px;">
-                            <span class="column__label">15</span>
-                        </div>
-                        <div class="column" style="height: 10px;">
-                            <span class="column__label">10</span>
-                        </div>
-                        <div class="time-row">17:00</div>
-                    </div>
-                    <div class="precipitation-probability-graph">
-                        <div class="column" style="height: 5px;">
-                            <span class="column__label">5</span>
-                        </div>
-                        <div class="column" style="height: 0px;">
-                            <span class="column__label">0</span>
-                        </div>
-                        <div class="column" style="height: 4px;">
-                            <span class="column__label">4</span>
-                        </div>
-                        <div class="time-row">17:00</div>
-                    </div>
-                </div>
-                <div class="graph__part">
-                    <div class="precipitation-probability-graph">
-                        <div class="column" style="height: 10px;">
-                            <span class="column__label">10</span>
-                        </div>
-                        <div class="column" style="height: 30px;">
-                            <span class="column__label">30</span>
-                        </div>
-                        <div class="column" style="height: 20px;">
-                            <span class="column__label">20</span>
-                        </div>
-                        <div class="time-row">17:00</div>
-                    </div>
-                    <div class="precipitation-probability-graph">
-                        <div class="column" style="height: 21px;">
-                            <span class="column__label">21</span>
-                        </div>
-                        <div class="column" style="height: 30px;">
-                            <span class="column__label">30</span>
-                        </div>
-                        <div class="column" style="height: 25px;">
-                            <span class="column__label">25</span>
-                        </div>
-                        <div class="time-row">17:00</div>
-                    </div>
-                    <div class="precipitation-probability-graph">
-                        <div class="column" style="height: 17px;">
-                            <span class="column__label">17</span>
-                        </div>
-                        <div class="column" style="height: 15px;">
-                            <span class="column__label">15</span>
-                        </div>
-                        <div class="column" style="height: 10px;">
-                            <span class="column__label">10</span>
-                        </div>
-                        <div class="time-row">17:00</div>
-                    </div>
-                    <div class="precipitation-probability-graph">
-                        <div class="column" style="height: 5px;">
-                            <span class="column__label">5</span>
-                        </div>
-                        <div class="column" style="height: 0px;">
-                            <span class="column__label">0</span>
-                        </div>
-                        <div class="column" style="height: 4px;">
-                            <span class="column__label">4</span>
-                        </div>
-                        <div class="time-row">17:00</div>
-                    </div>
-                </div>
+            <section class="additional-data">
+                <p class="additional-data__humidity">Humidity: <span class="value-label"></span></p>
+                <p class="additional-data__wind">Wind: <span class="value-label"></span></p>
+                <p class="additional-data__rain">Rain: <span class="value-label"></span></p>
             </section>
 
-            <section class="graph wind-values">
-                <div class="graph__part">
-                    <div class="wind-values-info">
-                        <div class="wind-values-info__value">4 m/s</div>
-                        <div class="im im-arrow-right wind-values-info-img"></div>
-                        <div class="time-row">17:00</div>
-                    </div>
-                    <div class="wind-values-info">
-                        <div class="wind-values-info__value">4 m/s</div>
-                        <div class="im im-arrow-right wind-values-info-img"></div>
-                        <div class="time-row">17:00</div>
-                    </div>
-                    <div class="wind-values-info">
-                        <div class="wind-values-info__value">4 m/s</div>
-                        <div class="im im-arrow-right wind-values-info-img"></div>
-                        <div class="time-row">17:00</div>
-                    </div>
-                    <div class="wind-values-info">
-                        <div class="wind-values-info__value">4 m/s</div>
-                        <div class="im im-arrow-right wind-values-info-img"></div>
-                        <div class="time-row">17:00</div>
-                    </div>
+            <section class="forecast">
+                <div class="forecast-item">
+                    <div class="forecast-item__day-name">ср</div>
+                    <div class="forecast-item__weather-img"></div>
+                    <div class="forecast-item__temperature">14 12</div>
                 </div>
-                <div class="graph__part">
-                    <div class="wind-values-info">
-                        <div class="wind-values-info__value">4 m/s</div>
-                        <div class="im im-arrow-right wind-values-info-img"></div>
-                        <div class="time-row">17:00</div>
-                    </div>
-                    <div class="wind-values-info">
-                        <div class="wind-values-info__value">4 m/s</div>
-                        <div class="im im-arrow-right wind-values-info-img"></div>
-                        <div class="time-row">17:00</div>
-                    </div>
-                    <div class="wind-values-info">
-                        <div class="wind-values-info__value">4 m/s</div>
-                        <div class="im im-arrow-right wind-values-info-img"></div>
-                        <div class="time-row">17:00</div>
-                    </div>
-                    <div class="wind-values-info">
-                        <div class="wind-values-info__value">4 m/s</div>
-                        <div class="im im-arrow-right wind-values-info-img"></div>
-                        <div class="time-row">17:00</div>
-                    </div>
+                <div class="forecast-item">
+                    <div class="forecast-item__day-name">ср</div>
+                    <div class="forecast-item__weather-img"></div>
+                    <div class="forecast-item__temperature">14 12</div>
                 </div>
+                <div class="forecast-item">
+                    <div class="forecast-item__day-name">ср</div>
+                    <div class="forecast-item__weather-img"></div>
+                    <div class="forecast-item__temperature">14 12</div>
+                </div>
+                <div class="forecast-item">
+                    <div class="forecast-item__day-name">ср</div>
+                    <div class="forecast-item__weather-img"></div>
+                    <div class="forecast-item__temperature">14 12</div>
+                </div>
+                <div class="forecast-item">
+                    <div class="forecast-item__day-name">ср</div>
+                    <div class="forecast-item__weather-img"></div>
+                    <div class="forecast-item__temperature">14 12</div>
+                </div>                
             </section>
-        </section>
-        <section class="forecast">
-            <div class="forecast-info">
-                <p class="forecast-info__day-name">Today</p>
-                <div class="forecast-info__weather-type">
-                    <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
+
+            <section class="graphics">
+                <div class="tabber" id="tabber">
+                    <button class="tabber__button tabber__button--selected">Temperature</button>
+                    <button class="tabber__button">Wind</button>
+                    <button class="tabber__button">Rain</button>
+                
+                    <section class="temperature-graphic graphic">
+                        <div class="column"><span class="column__label"></span></div>
+                        <div class="column"><span class="column__label"></span></div>
+                        <div class="column"><span class="column__label"></span></div>
+                        <div class="column"><span class="column__label"></span></div>
+                        <div class="column"><span class="column__label"></span></div>
+                        <div class="column"><span class="column__label"></span></div>
+                        <div class="column"><span class="column__label"></span></div>
+                        <div class="column"><span class="column__label"></span></div>
+                    </section>
+                    <section class="wind-graphic graphic tabber-none">
+                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
+                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
+                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
+                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
+                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
+                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
+                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
+                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
+                    </section>
+                    <section class="rain-graphic graphic tabber-none">
+                        <div class="column"><span class="column__label"></span></div>
+                        <div class="column"><span class="column__label"></span></div>
+                        <div class="column"><span class="column__label"></span></div>
+                        <div class="column"><span class="column__label"></span></div>
+                        <div class="column"><span class="column__label"></span></div>
+                        <div class="column"><span class="column__label"></span></div>
+                        <div class="column"><span class="column__label"></span></div>
+                        <div class="column"><span class="column__label"></span></div>
+                    </section>
                 </div>
-                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
-                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
+            <div class="graphics-timetable">
+                <div class="graphics-timetable__time">1</div>
+                <div class="graphics-timetable__time">2</div>
+                <div class="graphics-timetable__time">3</div>
+                <div class="graphics-timetable__time">4</div>
+                <div class="graphics-timetable__time">5</div>
+                <div class="graphics-timetable__time">6</div>
+                <div class="graphics-timetable__time">7</div>
+                <div class="graphics-timetable__time">8</div>
             </div>
-            <div class="forecast-info">
-                <p class="forecast-info__day-name">Wednesday</p>
-                <div class="forecast-info__weather-type">
-                    <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                </div>
-                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
-                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
-            </div>
-            <div class="forecast-info">
-                <p class="forecast-info__day-name">Thursday</p>
-                <div class="forecast-info__weather-type">
-                    <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                </div>
-                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
-                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
-            </div>
-            <div class="forecast-info">
-                <p class="forecast-info__day-name">Friday</p>
-                <div class="forecast-info__weather-type">
-                    <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                </div>
-                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
-                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
-            </div>
-            <div class="forecast-info">
-                <p class="forecast-info__day-name">Saturday</p>
-                <div class="forecast-info__weather-type">
-                    <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                </div>
-                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
-                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
-            </div>
-            <div class="forecast-info">
-                <p class="forecast-info__day-name">Sunday</p>
-                <div class="forecast-info__weather-type">
-                    <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                </div>
-                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
-                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
-            </div>
-            <div class="forecast-info">
-                <p class="forecast-info__day-name">Monday</p>
-                <div class="forecast-info__weather-type">
-                    <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                </div>
-                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
-                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
-            </div>
-            <div class="forecast-info">
-                <p class="forecast-info__day-name">Today</p>
-                <div class="forecast-info__weather-type">
-                    <img src="assets-5days/Cloudy Weather_2.png" alt="" class="forecast-info__weather-type">
-                </div>
-                <p class="forecast-info__temperatures">68° <span class="text-light">36°</span></p>
-                <p class="forecast-info__pollen"><span class="text-light">Pollen:</span> 36</p>
-            </div>
-        </section>
-    </main>  
-         
-    <footer class="footer">
-        <center>2018 (c) Copyright</center>
-    </footer>
-    </body>
+
+            </section>
+        </main>
+    </section>
+</body>
 </html>
 
-<script>
-    var tabber = document.querySelector('.tabber');
-    tabber.buttons = tabber.querySelectorAll('.button');
-    tabber.blocks = tabber.querySelectorAll('.graph');
-    tabber.index = 0;
-    tabber.onclick = function(event) {
-        if (event.target.classList.contains('button')) {
-            var i = Array.prototype.indexOf.call(this.buttons, event.target);
-            if (i == -1) return;
-            this.blocks[this.index].classList.remove('active');
-            this.buttons[this.index].classList.remove('button--selected');
-            this.index = i;
-            this.buttons[this.index].classList.add('button--selected');
-            this.blocks[this.index].classList.add('active');
-        }
-    }
-</script>
+<script src="./js/render.js"></script>
+<script src="./js/business/todayData.js"></script>
+<script src="./js/business/forecast.js"></script>
+<script src="./js/tabber.js"></script>
+<script src="./js/today.js"></script>

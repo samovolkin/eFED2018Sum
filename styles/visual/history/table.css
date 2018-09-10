@@ -1,0 +1,9 @@
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.row__cell {
+    width: 100px;
+    text-align: center;
+}

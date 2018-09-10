@@ -1,0 +1,15 @@
+.tabber__button {
+    background-color: white;
+    border: 1px solid rgb(209, 209, 209);
+    outline: none;
+    position: relative;
+    border-bottom: none;
+}
+
+.tabber__button--selected {
+    top: 1px;
+}
+
+.tabber-none {
+    display: none;
+}

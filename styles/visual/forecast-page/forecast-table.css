@@ -1,0 +1,15 @@
+.day-forecast {
+    width: 100%;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.day-forecast__day {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
