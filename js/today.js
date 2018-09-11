@@ -15,13 +15,15 @@ searchInput.onkeydown = function (event) {
 function transformTodayData(data) {
     //console.log(data);
     var bTodayDataObject = new TodayData(data);
-    //console.log(bTodayDataObject);
+    console.log(bTodayDataObject);
     render({
         '.basic-weather': {
             '.basic-weather__town-name': bTodayDataObject.townName,
             '.basic-weather__day-name': bTodayDataObject.dayName,
             '.basic-weather__weather-type':  bTodayDataObject.weatherType,
-            '.basic-weather__temperature': bTodayDataObject.temperature
+            '.basic-weather__temperature': bTodayDataObject.temperature,
+            '.basic-weather__img': [bTodayDataObject.img]
+
         },
         '.additional-data__humidity': {
             '.value-label': bTodayDataObject.humidity
@@ -33,21 +35,22 @@ function transformTodayData(data) {
 }
 
 function transformForecastData(data) {
-    //console.log(data);
+    console.log(data);
     var forecastData = new ForecastData(data);
     console.log(forecastData);
     
     render({
         '.forecast': {
             '.forecast-item__temperature': forecastData.formattedTemperatures,
-            '.forecast-item__day-name': forecastData.dayNames
+            '.forecast-item__day-name': forecastData.dayNames,
+            '.forecast-item__weather-img': forecastData.icons
         },
         '.additional-data__rain': {
             '.value-label': forecastData.todayRain
         },
         '.rain-graphic': {
             '.column': extract(forecastData.today, {height: ['rain', (x) => `${x*2}%`]}),
-            '.column__label': extract(forecastData.today, {textContent: ['rain', (x) => `${x.toFixed(2)} mm`]}) 
+            '.column__label': extract(forecastData.today, {textContent: ['rain', (x) => `${x.toFixed(2)}`]}) 
         },
         '.temperature-graphic': {
             '.column': extract(forecastData.today, {height: ['temp', (x) => `${x*2.4}%`]}),

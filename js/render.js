@@ -19,8 +19,8 @@ function render(pairs, searchIn = document) {
                 for (var i = 0; i < item.length; i++) {
                     if (typeof item[i] == 'object') {
                         for(var property in item[i]) {
-                            if (property == 'textContent') 
-                                containers[i].textContent = item[i][property];
+                            if (property == 'textContent' || (property == 'src')) 
+                                containers[i][property] = item[i][property];                         
                             else
                                 containers[i].style[property] = item[i][property];
                         }

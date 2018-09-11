@@ -13,3 +13,14 @@
 .tabber-none {
     display: none;
 }
+
+.tabber {
+    margin-top: 5em;
+}
+
+
+@media screen and (max-width: 400px) {
+    .tabber {
+        margin-top: 0;
+    }
+}

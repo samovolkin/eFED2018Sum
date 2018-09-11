@@ -1,9 +1,72 @@
-.row {
-    display: flex;
-    flex-direction: row;
+.historical-table {
+    line-height: 20px;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-.row__cell {
-    width: 100px;
-    text-align: center;
+.historical-table th {
+    font-size: 11px;
+    text-align: left;
+    text-transform: uppercase;
+    background: #f2f0e6;
+}
+
+.historical-table th,
+.historical-table td {
+    padding: 6px 12px;
+    border: 1px solid #d9d7ce;
+}
+  
+@media screen and (max-width: 1007px) {       
+    .main {
+        padding: 0;
+    }
+               
+    .historical-table
+    {
+    display: flex;
+    word-wrap: normal;
+    overflow: hidden;
+    background: none;
+    }
+
+    .historical-table thead {
+    display: flex;
+    flex-shrink: 0;
+    word-wrap: normal;
+    }
+
+    .historical-table tbody {
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    }
+
+    .historical-table tr {
+    display: flex;
+    flex-direction: column;
+    min-width: min-content;
+    flex-shrink: 0;
+    }
+
+    .historical-table td,
+    .historical-table th {
+    display: block;
+    }
+
+    .historical-table td {
+    background-image: none !important;
+    border-left: 0;
+    }
+
+    .historical-table th:not(:last-child),
+    .historical-table td:not(:last-child) {
+        border-bottom: 0;
+    }
 }

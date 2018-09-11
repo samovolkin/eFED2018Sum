@@ -9,7 +9,13 @@
 }
 
 .day-forecast__day {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.24);
     color: white;
     text-align: center;
+    width: 100%;
+}
+
+.table-head {
+    display: flex;
+    justify-content: space-between;
 }

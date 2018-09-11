@@ -28,37 +28,89 @@
             <input type="text" id="search-input" placeholder="Search">
         </section>
         <main class="main">
-            <section class="table">
-                <div class="row">
-                    <div class="row__cell"></div>
-                    <div class="row__cell">January</div>
-                    <div class="row__cell">February</div>
-                    <div class="row__cell">March</div>
-                    <div class="row__cell">April</div>
-                    <div class="row__cell">May</div>
-                    <div class="row__cell">June</div>
-                    <div class="row__cell">July</div>
-                    <div class="row__cell">August</div>
-                    <div class="row__cell">September</div>
-                    <div class="row__cell">October</div>
-                    <div class="row__cell">November</div>
-                    <div class="row__cell">December</div>
-                </div>
-                <div class="row average-maximum">
-                    <div class="row__cell">Average maximum</div>
-                    <div class="row__cell"></div>
-                    <div class="row__cell"></div>
-                    <div class="row__cell"></div>
-                    <div class="row__cell"></div>
-                    <div class="row__cell"></div>
-                    <div class="row__cell"></div>
-                    <div class="row__cell"></div>
-                    <div class="row__cell"></div>
-                    <div class="row__cell"></div>
-                    <div class="row__cell"></div>
-                    <div class="row__cell"></div>
-                    <div class="row__cell"></div>
-                </div>
+
+             <section class="historical-table">
+                <table class="historical-table">
+                        <thead>
+                          <tr>
+                            <th> </th>
+                            <th>January</th>
+                            <th>February</th>
+                            <th>March</td>
+                            <th>April</th>
+                            <th>May</th>
+                            <th>June</th>
+                            <th>July</th>
+                            <th>August</th>
+                            <th>September</th>
+                            <th>October</th>
+                            <th>November</th>
+                            <th>December</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class='average-maximum'>
+                            <td>Average maximum</td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                          </tr>
+                          <tr class="average-minimum">
+                            <td>Average minimum</td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                          </tr>
+                          <tr class="record-maximum">
+                            <td>Record maximum</td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                          </tr>
+                          <tr class="record-minimum">
+                            <td>Record minimum</td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                            <td class="row__cell"></td>
+                          </tr>
+                        </tbody>
+                      </table>
             </section>
         </main>
     </section>
@@ -66,18 +118,8 @@
 </html>
 
 <script src="./js/render.js"></script>
-<script src="./mocks/HistoricalReviewMock.js"></script>
-<script>
-    var mock = historicalReviewMock.Izhevsk;
-    var dat = historicalReviewMock['Izhevsk'].reduce(function(previousYear, currentYear) {
-        for(var i = 0; i < 12; i++) {
-            previousYear[i].min = (previousYear[i].min < currentYear[i].min)? previousYear[i].min : currentYear[i].min;
-            previousYear[i].max = (previousYear[i].max > currentYear[i].max)? previousYear[i].max : currentYear[i].max;
-        }
-        return previousYear;
-    }, mock['1960']);
+<script src="./js/history.js"></script>
 
-</script>
 
 
 
