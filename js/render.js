@@ -1,10 +1,11 @@
 function getWeatherData(request, func) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', request);
-    xhr.send();
-    xhr.onload = function() {
-        func(JSON.parse(xhr.response));
-    };
+    fetch(request)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            func(data);
+        });
 }
 
 function render(pairs, searchIn = document) {

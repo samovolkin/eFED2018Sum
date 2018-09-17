@@ -8,6 +8,7 @@ searchInput.onkeydown = function (event) {
     console.log(searchRequest);
     var query = (/^zip\:\d+$/.test(searchRequest))? `zip=${searchRequest.slice(4)}` : `q=${searchRequest}`;
     searchInput.value = '';
+
     getWeatherData(`http://api.openweathermap.org/data/2.5/weather?${query}&units=metric&APPID=${APPID_KEY}`, transformTodayData);
     getWeatherData(`http://api.openweathermap.org/data/2.5/forecast?${query}&units=metric&APPID=${APPID_KEY}`, transformForecastData);
 };

@@ -1,6 +1,9 @@
 :root {
     --font-color-secondary: black; 
     --font-family: "Bahnschrift";
+
+    --main-color: rgb(236, 224, 108);
+    --secondary-color: rgba(0, 0, 0, 0.075);
 }
 
 .body {
@@ -9,11 +12,13 @@
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: var(--secondary-color);
 }
 
 .header {
     height: 100%;
     width: 150px;
+    background-color: var(--main-color);
 }
 
 .navigation {
