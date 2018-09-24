@@ -3,26 +3,22 @@
     --font-family: "Bahnschrift";
 
     --main-color: rgb(236, 224, 108);
-    --secondary-color: rgba(0, 0, 0, 0.075);
 }
 
 .body {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
     margin: 0;
     padding: 0;
-    background-color: var(--secondary-color);
 }
 
 .header {
     height: 100%;
-    width: 150px;
+    display: flex;
     background-color: var(--main-color);
 }
 
 .navigation {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     margin: .5em 0 0 0;
 }
@@ -32,7 +28,8 @@
     text-decoration: none;
     color: var(--font-color-secondary);
     font-family: var(--font-family);
-    width: 100%;
+    text-align: center;
+    min-width: 70px;
     padding: 0.9em;
 }
 

@@ -30,7 +30,7 @@
             <input type="text" id="search-input" placeholder="Search">
         </section>
         <main class="main">
-            <section class="basic-weather-data">
+            <section class="basic-weather-data" id="basic-weather-data">
                 <div class="basic-weather">
                     <h1 class="basic-weather__town-name">Izhevsk, RU</h1>
                     <p class="basic-weather__day-name">wednesday</p>
@@ -128,8 +128,16 @@
 </body>
 </html>
 
-<script src="./js/render.js"></script>
-<script src="./js/business/todayData.js"></script>
-<script src="./js/business/forecast.js"></script>
-<script src="./js/tabber.js"></script>
-<script src="./js/today.js"></script>
+
+<script src="./js/classes/Speaker.js"></script>
+<script src="./js/classes/Renderer.js"></script>
+<script src="./js/transformers/todayData.js"></script>
+<script src="./js/transformers/forecast.js"></script>
+<script src="./js/classes/Fetcher.js"></script>
+<script src="./js/common/extract.js"></script>
+<script src="./js/renderers/index/rToday.js"></script>
+<script src="./js/renderers/index/rForecast.js"></script>
+<script src="./js/elements/tabber.js"></script>
+<script src="./js/elements/Search.js"></script>
+<script src="./js/index.js"></script>
+
