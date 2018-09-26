@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+<script>
+
+    function Vehical(speed) {
+        this.speed = speed;
+    }
+
+    function Bike(speed, wheelsCount) {
+        Vehical.call(this, speed);
+        this.wheelsCount = wheelsCount;
+    }
+
+    function Car(speed, wheelsCount, doorsCount) {
+        Vehical.call(this, speed, wheelsCount);
+        this.doorsCount = doorsCount;
+        this.openedDoors = 0;
+    }
+
+    function MonsterTruck(speed, wheelsCount, doorsCount, wheelsSize) {
+        Car.call(this, speed, wheelsCount, doorsCount);
+        this.wheelsSize = wheelsSize;
+    }
+
+    Bike.prototype = Object.create(Vehical.prototype);
+    Bike.prototype.constructor = Bike;
+    Car.prototype = Object.create(Vehical.prototype);
+    Car.prototype.constructor = Car;
+    MonsterTruck.prototype = Object.create(Car.prototype);
+    MonsterTruck.prototype.constructor = MonsterTruck;
+
+
+    Vehical.prototype.move = function () {
+        this.speed++;
+    };
+
+    Vehical.prototype.stop = function () {
+        this.speed = 0;
+    };
+
+    Bike.prototype.move = function () {
+        this.speed++;
+        console.log('Wroom-wrooom-wroooom!!!');
+    }
+
+    Car.prototype.openDoor = function () {
+        if (this.openedDoors != this.doorsCount) {
+            this.openedDoors++;
+            console.log(`Количество открытых дверей ${this.openedDoors}`);
+        }
+    };
+
+    Car.prototype.closeDoor = function () {
+        if (this.openedDoors != 0) {
+            this.openedDoors--;
+            console.log(`Количество закрытых дверей ${this.doorsCount - this.openedDoors}`);
+        }
+    }
+
+    MonsterTruck.prototype.openDoor = function () {
+        setTimeout(function () {
+            Car.prototype.openDoor.call(this);
+        }.bind(this), 1000);
+    };
+</script>
