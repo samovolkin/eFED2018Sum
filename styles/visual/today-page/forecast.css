@@ -1,0 +1,19 @@
+.forecast {
+    display: flex;
+    flex-direction: row;
+    margin: 1em 0;
+}
+
+.forecast-item {
+    flex: 1;
+}
+
+.forecast-item__day-name {
+    font-weight: 900;
+}
+
+@media screen and (max-width: 400px) {
+    .forecast-item {
+        text-align: center;
+    }
+}

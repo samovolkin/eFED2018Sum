@@ -1,0 +1,35 @@
+.graphic {
+    display: flex;
+    align-items: flex-end;
+    height: 200px;
+    border: 1px solid rgb(209, 209, 209);
+}
+
+.column {
+    flex: 1;
+    height: 10px;
+    box-sizing: border-box;
+
+    border-top: 4px solid rgba(33, 105, 187, 0.959);
+    background-color: rgba(33, 105, 187, 0.247);
+}
+
+.column__label {
+    position: relative;
+    bottom: 1.2em;
+    left: 0.2em;
+    color: rgba(0, 0, 0, 0.432);
+}
+
+.graphics-timetable {
+    display: flex;
+    border: 1px solid rgb(209, 209, 209);
+    border-top: none;
+    font-size: 0.8em;
+}
+
+.graphics-timetable__time {
+    flex: 1;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.664);
+}

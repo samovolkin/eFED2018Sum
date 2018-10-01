@@ -1,0 +1,21 @@
+.day-forecast {
+    width: 100%;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.day-forecast__day {
+    background-color: rgba(0, 0, 0, 0.24);
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.table-head {
+    display: flex;
+    justify-content: space-between;
+}

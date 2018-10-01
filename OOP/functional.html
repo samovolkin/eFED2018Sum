@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+<script>
+    function Vehical(speed, wheelsCount) {
+        this.speed = speed;
+        this.wheelsCount = wheelsCount;
+
+        this.move = function () {
+            this.speed++;
+        };
+
+        this.stop = function () {
+            this.speed = 0;
+        };
+
+        this.toString = function () {
+            return `Vehical: \nСкорость: ${this.speed}`;
+        };
+
+        this.valueOf = function () {
+            return this.speed;
+        };
+    }
+
+    function Bike(speed, wheelsCount) {
+        Vehical.call(this, speed);
+        this.wheelsCount = wheelsCount;
+
+        this.move = function () {
+            this.speed++;
+            console.log('Wroom-wrooom-wroooom!!!');
+        };
+
+        this.toString = function () {
+            return `Bike: \nСкорость: ${this.speed}\nКоличество колес: ${this.wheelsCount}`;
+        };
+
+        this.valueOf = function () {
+            return this.wheelsCount;
+        };
+    }
+
+    function Car(speed, wheelsCount, doorsCount) {
+        Vehical.call(this, speed, wheelsCount);
+        this.doorsCount = doorsCount;
+        this.openedDoors = 0;
+
+        Car.prototype.amount++;
+
+        this.openDoor = function () {
+            if (this.openedDoors != this.doorsCount) {
+                this.openedDoors++;
+                console.log(`Количество открытых дверей ${this.openedDoors}`);
+            }
+        };
+
+        this.closeDoor = function () {
+            if (this.openedDoors != 0) {
+                this.openedDoors--;
+                console.log(`Количество закрытых дверей ${this.doorsCount - this.openedDoors}`);
+            }
+        };
+
+        this.valueOf = function () {
+            return this.speed;
+        };
+
+        this.toString = function () {
+            return `Car: \nСкорость: ${this.speed}\nКоличество колес: ${this.wheelsCount}\nКоличество дверей: ${this.doorsCount}\nОткрытых дверей: ${this.openedDoors}`;
+        };
+    }
+
+    function MonsterTruck(speed, wheelsCount, doorsCount, wheelsSize) {
+        Car.call(this, speed, wheelsCount, doorsCount);
+        this.wheelsSize = wheelsSize;
+
+        var parentOpenDoor = this.openDoor;
+        this.openDoor = function () {
+            setTimeout(function () {
+                parentOpenDoor();
+            }.bind(this), 1000);
+        };
+
+        this.valueOf = function () {
+            return this.wheelsSize;
+        };
+
+        this.toString = function () {
+            return `Car: \nСкорость: ${this.speed}\nКоличество колес: ${this.wheelsCount}\nКоличество дверей: ${this.doorsCount}\nОткрытых дверей: ${this.openedDoors}\nРазмер колес: ${this.wheelsSize}`;
+        };
+    }
+
+
+    Car.prototype.amount = 0;
+
+
+    var monsterTruck = new MonsterTruck(10, 4, 2, 90);
+    var bike = new Bike(100, 2);
+    var car = new Car(50, 4, 4);
+    var vehical = new Vehical(1, 3);
+
+
+    for (var item of [monsterTruck, bike, car, vehical]) {
+        console.table(item);
+        console.log(`${item}`);
+        console.log('Value of: ' + +item);
+    }
+</script>

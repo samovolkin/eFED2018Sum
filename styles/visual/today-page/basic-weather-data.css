@@ -1,0 +1,12 @@
+.basic-weather {
+    padding: 1em 0;
+}
+
+.basic-weather__town-name {
+    font-size: 3em;
+    font-weight: 900;
+}
+
+.basic-weather__temperature {
+    font-weight: 900;
+}

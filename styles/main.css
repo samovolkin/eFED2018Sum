@@ -1,174 +1,66 @@
 :root {
-    --primary-color: black;
-    --secondary-color: white;
-    --secondary-color-dark: rgb(177, 177, 177);
-    --primary-color-light: rgb(110, 110, 110);
-    --border-color: lightgray;
-    --primary-font: Arial, Helvetica;
-    --third-color: #64d3f5;
-    --third-color-dark: #1db6fd;
+    --font-color-secondary: black; 
+    --font-family: "Bahnschrift";
+
+    --main-color: rgb(236, 224, 108);
 }
 
-a {
-    text-decoration: none;
-    color: var(--primary-color-light);
-}
-
-* {
+.body {
     margin: 0;
     padding: 0;
 }
 
-.body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
 .header {
-    font-family: var(--primary-font);
-    box-shadow: 0 5px 10px #a1a1a1;
-}
-
-.search-input {
-    height: 3em;
-    width: 100%;
-    padding-left: 24px;
-    background-image: url("/images/sharp-search-24px.svg");
-    background-repeat: no-repeat;
-    background-position-y: 0.6em;
-    border: none;
-    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    background-color: var(--main-color);
 }
 
 .navigation {
-    list-style: none;
-    background-color: var(--primary-color);
-    color: var(--primary-color-light);
-}
-.navigation__item {
-    padding: 1em;
-}
-
-.navigation__item--selected a{
-    color: var(--secondary-color);
-}
-
-.content {
-    padding: 1em 0;
-    flex: 1;
-}
-
-.button {
-    border: 1px solid var(--border-color);
-    background-color: var(--secondary-color);
-    flex: 1;
-    padding: 1em;
-    min-height: 2em;
-    max-height: 4em;
-}
-
-.graph {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    margin: 1em 0 0 0;
+    margin: .5em 0 0 0;
 }
 
-.graph__part {
-    margin: 1em 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-}
-
-.column {
-    flex: 1;
-    background-color: var(--third-color);
-    border-top: 3px solid var(--third-color-dark);
+.navigation__link {
+    display: block;
+    text-decoration: none;
+    color: var(--font-color-secondary);
+    font-family: var(--font-family);
     text-align: center;
+    min-width: 70px;
+    padding: 0.9em;
 }
 
-.row {
-    background-color: var(--third-color);
-    border-right: 3px solid var(--third-color-dark);
-    text-align: left;
-    padding: 0 1em;
+.navigation__link--active {
+    text-decoration: underline;
 }
 
-.column__label {
-    position: relative;
-    bottom: 1.4em;
-    font-size: 0.9em;
-}
-
-.footer {
-    text-align: center;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);  
-}
-
-.forecast {
-    margin-top: 1em;
-    padding: 0.5em;
-}
-
-.forecast-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 4em;
-    border-top: 1px solid var(--border-color);
-}
-
-.forecast-info__day-name {
+.wrapper {
     flex: 1;
+}
+
+.main-data__town-name {
+    font-size: 3em;
     font-weight: 900;
 }
 
-.forecast-info__wind,
-.forecast-info__precipitation,
-.forecast-info__weather-type,
-.forecast-info__pollen,
-.forecast-info__temperatures {
-    text-align: center;
-    flex: 1;
-}
-
-.todays-date,
-.weather-type,
-.text-light {
-    color: var(--primary-color-light);
-}
-
-.precipitation-probability-button {
-    border-right: none;
-    border-left: none;
+.main-data__weather-type-img {
+    font-size: 100px;
 }
 
 
-.forecast-info__wind {
-    background-image: url("/images/wind-rectangle.svg");
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-}
-
-.forecast-info__precipitation {
-    display: flex;
-}
-
-@media screen and (min-width: 767px) {
-    .navigation {
-        display: flex;
-    }
-    .header__search-form {
-        display: flex;
-        justify-content: flex-end;
-        
-    }
-    .search-input {
-        width: 25%;
-        border-left: 1px solid var(--border-color);
+@media screen and (max-width: 400px) {
+    .body {
+        flex-direction: column;
+        height: unset;
     }
 
-    
+    .header {
+        height: unset;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgb(209, 209, 209);
+    }
 }
