@@ -3,12 +3,12 @@ const APPID_KEY = "e33262cd6a432b1c3dc5181a736dbc41";
 const page = new Page({
     search: '#search-input',
     fetchers: {
-        'today_fetcher': {
+        'today': {
             url: "http://api.openweathermap.org/data/2.5/weather",
             param: { units: "metric", APPID: APPID_KEY },
             transformer: TodayData,
         },
-        'forecast_fetcher': {
+        'forecast': {
             url: "http://api.openweathermap.org/data/2.5/forecast",
             param: { units: "metric", APPID: APPID_KEY },
             transformer: ForecastData,
@@ -17,7 +17,7 @@ const page = new Page({
     components: {
         'basicWeather': {
             target: '.basic-weather',
-            subscribe: 'today_fetcher',
+            subscribe: 'today',
             labels: {
                 townName: '.basic-weather__town-name',
                 dayName: '.basic-weather__day-name',
@@ -30,8 +30,8 @@ const page = new Page({
 
 
 
-const basicInfoRenderer = new rToday("#basic-weather-data", page.fetchers['today_fetcher']);
-const forecastRenderer = new rForecast("sadf", page.fetchers['forecast_fetcher']);
+const basicInfoRenderer = new rToday("#basic-weather-data", page.fetchers.today);
+const forecastRenderer = new rForecast("sadf", page.fetchers.forecast);
 
 initTabberElement({
     id: "tabber",
