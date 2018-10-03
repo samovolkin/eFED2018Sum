@@ -13,8 +13,13 @@ class Page {
 
         const comps = options.components;
         for (let name in comps) {
-            const comp = new Component(comps[name]);
-            comp.subscribe(this.fetchers[comps[name].subscribe]);
+            let comp;
+            if ('type' in comps[name]) {
+                comp = new comps[name].type(comps[name]);
+            } else comp = new Component(comps[name]); 
+            comp.onUpdate = function(data) { this.render(data); };
+
+            if ('subscribe' in comps[name]) comp.subscribe(this.fetchers[comps[name].subscribe]);
             this.components[name] = comp;
         }
     }

@@ -6,12 +6,12 @@ const page = new Page({
         'today': {
             url: "http://api.openweathermap.org/data/2.5/weather",
             param: { units: "metric", APPID: APPID_KEY },
-            transformer: TodayData,
+            mapper: mapTodayData,
         },
         'forecast': {
             url: "http://api.openweathermap.org/data/2.5/forecast",
             param: { units: "metric", APPID: APPID_KEY },
-            transformer: ForecastData,
+            mapper: ForecastData,
         }
     },
     components: {
@@ -19,21 +19,39 @@ const page = new Page({
             target: '.basic-weather',
             subscribe: 'today',
             labels: {
-                townName: '.basic-weather__town-name',
-                dayName: '.basic-weather__day-name',
+                city: '.basic-weather__town-name',
+                day: '.basic-weather__day-name',
                 weatherType: '.basic-weather__weather-type',
-                temperature: '.basic-weather__temperature' 
+                temperature: '.basic-weather__temperature',
+                weatherImg: '.basic-weather__img'
             }
         },
+        'additional': {
+            target: '.additional-data',
+            subscribe: 'today',
+            labels: {
+                humidity: '.additional-data__humidity',
+                rain: '.additional-data__rain',
+                wind: '.additional-data__wind',
+                pressure: '.additional-data__pressure',
+                clouds: '.additional-data__clouds'
+            }
+        },
+        'forecast': {
+            type: List,
+            target: '.forecast',
+            itemSelector: '.forecast-item',
+            itemLabels: {
+                day: '.forecast-item__day-name',
+                temperature: '.forecast-item__temperature',
+                img: '.forecast-item__weather-img',
+            }
+        }
     }
 });
 
 
-
-const basicInfoRenderer = new rToday("#basic-weather-data", page.fetchers.today);
-const forecastRenderer = new rForecast("sadf", page.fetchers.forecast);
-
-initTabberElement({
+Utils.initTabberElement({
     id: "tabber",
     blocks: {
         selector: ".graphic",

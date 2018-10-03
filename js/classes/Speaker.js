@@ -1,6 +1,10 @@
 class Speaker {
     constructor(subscribe, subscribers = []) {
-        this.subscribers = subscribers;
+        Object.defineProperty(this, 'subscribers', {
+            value: subscribers,
+            enumerable: false,
+            writable: true
+        });
     
         if (subscribe instanceof Array) {
             for (let i of subscribe)

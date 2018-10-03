@@ -5,8 +5,8 @@ function ForecastData(data) {
     this.today = getTodayForecastData(data);
     this.windSpeedValues = this.today.map((item) => `${Math.round(item.wind.speed)}`);
     this.windDegrees = this.today.map((item) => item.wind.deg);
-    this.todayRain = `${extract(this.today, 'rain').reduce((sum, current) => sum+current).toFixed(2)} mm`;
-    this.icons = extract(this.today, 'icon').slice(0,5).map(function (x) { return {src: `http://openweathermap.org/img/w/${x.slice(0,2)}d.png`};});
+    this.todayRain = `${Utils.extract(this.today, 'rain').reduce((sum, current) => sum+current).toFixed(2)} mm`;
+    this.icons = Utils.extract(this.today, 'icon').slice(0,5).map(function (x) { return {src: `http://openweathermap.org/img/w/${x.slice(0,2)}d.png`};});
 }
 
 function getTemperatures(data) {

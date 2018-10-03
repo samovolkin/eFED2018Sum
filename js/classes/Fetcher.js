@@ -20,7 +20,11 @@ class Fetcher extends Speaker {
         let response = await fetch(request);
         response = await response.json();
 
-        const transformedData = new this.options.transformer(response);
+        console.log(`Data before:`);
+        console.log(response);
+        const transformedData = this.options.mapper(response);
+        console.log(`Data after:`);
+        console.log(transformedData);
         this.share(transformedData);
     }
 }

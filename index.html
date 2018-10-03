@@ -41,37 +41,31 @@
             </section>
 
             <section class="additional-data">
-                <p class="additional-data__humidity">Humidity: <span class="value-label"></span></p>
+                <p class="line">Humidity: <span class="additional-data__humidity"></span></p>
                 <p class="additional-data__wind">Wind: <span class="value-label"></span></p>
                 <p class="additional-data__rain">Rain: <span class="value-label"></span></p>
+                <p class="additional-data__pressure"></p>
+                <p class="additional-data__clouds"></p>
             </section>
 
             <section class="forecast">
                 <div class="forecast-item">
-                    <div class="forecast-item__day-name">ср</div>
+                    <div class="forecast-item__day-name"> 
+                        <div class="temp"></div>
+                        <div class="temp"></div>
+                        <div class="temp"></div> ср</div>
                     <div class="forecast-item__temperature">14 12</div>
                     <img class="forecast-item__weather-img" alt='weather-img'></div>
                 </div>
                 <div class="forecast-item">
-                    <div class="forecast-item__day-name">ср</div>
+                    <div class="forecast-item__day-name"> 
+                        <div class="temp"></div>
+                        <div class="temp"></div>
+                        <div class="temp"></div> ср</div>
                     <div class="forecast-item__temperature">14 12</div>
                     <img class="forecast-item__weather-img" alt='weather-img'></div>
                 </div>
-                <div class="forecast-item">
-                    <div class="forecast-item__day-name">ср</div>
-                    <div class="forecast-item__temperature">14 12</div>
-                    <img class="forecast-item__weather-img" alt='weather-img'></div>
-                </div>
-                <div class="forecast-item">
-                    <div class="forecast-item__day-name">ср</div>
-                    <div class="forecast-item__temperature">14 12</div>
-                    <img class="forecast-item__weather-img" alt='weather-img'></div>
-                </div>
-                <div class="forecast-item">
-                    <div class="forecast-item__day-name">ср</div>
-                    <div class="forecast-item__temperature">14 12</div>
-                    <img class="forecast-item__weather-img" alt='weather-img'></div>
-                </div>        
+                   
             </section>
 
             <section class="graphics">
@@ -129,16 +123,12 @@
 </html>
 
 
+<script src="./js/classes/Utils.js"></script>
 <script src="./js/classes/Speaker.js"></script>
-<script src="./js/classes/Renderer.js"></script>
-<script src="./js/transformers/todayData.js"></script>
-<script src="./js/transformers/forecast.js"></script>
+<script src="./js/mappers/todayData.js"></script>
+<script src="./js/mappers/forecast.js"></script>
 <script src="./js/classes/Fetcher.js"></script>
-<script src="./js/common/extract.js"></script>
-<script src="./js/renderers/index/rToday.js"></script>
-<script src="./js/renderers/index/rForecast.js"></script>
-<script src="./js/elements/tabber.js"></script>
-<script src="./js/elements/Search.js"></script>
+<script src="./js/classes/Search.js"></script>
 <script src="./js/classes/Component.js"></script>
 <script src="./js/classes/Page.js"></script>
 <script src="./js/index.js"></script>

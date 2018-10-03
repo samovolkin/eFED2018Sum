@@ -1,6 +1,12 @@
 class Component extends Speaker{
     constructor(options, parent = document) {
         super();
+
+        Object.defineProperty(this, 'target', {
+            enumerable: false,
+            writable: true
+        });
+
         if (options.target instanceof HTMLElement) {
             this.target = options.target;
         } else this.target = parent.querySelector(options.target);
@@ -9,11 +15,6 @@ class Component extends Speaker{
 
         for (let label in options.labels) {
             this[label] = this.target.querySelector(options.labels[label]);
-        }
-
-        let childList = options.childList;
-        for (let i in childList) {
-        this[i] = new childList[i].type(childList[i].options, this.target);
         }
     }
 
@@ -41,7 +42,7 @@ class List extends Component {
     constructor(options, parent) {
         super(options, parent);
 
-        let { itemSelector, itemLabels, itemProperties } = options;
+        let { itemSelector, itemLabels } = options;
 
         let selectedNodes = this.target.querySelectorAll(itemSelector);
         this.items = Array.prototype.map.call(selectedNodes, x => {
@@ -52,7 +53,7 @@ class List extends Component {
         });
     }
 
-    render(data) { // data must be an array of objects
+    render(data) { // data must be an array of objects // исправить на data
         for (let i in this.items) {
             this.items[i].render(data[i]);
         }
