@@ -14,16 +14,16 @@ searchInput.onkeydown = function(event) {
 function updateInfoViaMock(req) {
     render({
         ".average-maximum": {
-            ".row__cell": extract(historyWeatherMock[req], "average-maximum"),
+            ".row__cell": Utils.extract(historyWeatherMock[req], "average-maximum"),
         },
         ".average-minimum": {
-            ".row__cell": extract(historyWeatherMock[req], "average-minimum"),
+            ".row__cell": Utils.extract(historyWeatherMock[req], "average-minimum"),
         },
         ".record-maximum": {
-            ".row__cell": extract(historyWeatherMock[req], "record-maximum"),
+            ".row__cell": Utils.extract(historyWeatherMock[req], "record-maximum"),
         },
         ".record-minimum": {
-            ".row__cell": extract(historyWeatherMock[req], "record-minimum"),
+            ".row__cell": Utils.extract(historyWeatherMock[req], "record-minimum"),
         },
     });
 }

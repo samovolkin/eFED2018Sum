@@ -7,11 +7,13 @@ const page = new Page({
             url: "http://api.openweathermap.org/data/2.5/weather",
             param: { units: "metric", APPID: APPID_KEY },
             mapper: mapTodayData,
+            onError: onError
         },
         'forecast': {
             url: "http://api.openweathermap.org/data/2.5/forecast",
             param: { units: "metric", APPID: APPID_KEY },
-            mapper: ForecastData,
+            mapper: mapForecastData,
+            onError: onError
         }
     },
     components: {
@@ -37,19 +39,47 @@ const page = new Page({
                 clouds: '.additional-data__clouds'
             }
         },
-        'forecast': {
-            type: List,
-            target: '.forecast',
-            itemSelector: '.forecast-item',
-            itemLabels: {
-                day: '.forecast-item__day-name',
-                temperature: '.forecast-item__temperature',
-                img: '.forecast-item__weather-img',
-            }
-        }
     }
 });
 
+const renderer = new Renderer(page.fetchers['forecast']);
+renderer.onUpdate = function(data) {
+    this.render({
+        '.body': {
+            '.onerror': {display: 'none'},
+            '.main': {display: 'block'}
+        },
+        '.forecast': {
+            '.forecast-item__temperature': data.formattedTemperatures,
+            '.forecast-item__day-name': data.dayNames,
+            '.forecast-item__weather-img': data.icons
+        },
+        '.rain-graphic': {
+            '.column': Utils.extract(data.today, {height: ['rain', (x) => `${x*2}%`]}),
+            '.column__label': Utils.extract(data.today, {textContent: ['rain', (x) => `${x.toFixed(2)}`]}) 
+        },
+        '.temperature-graphic': {
+            '.column': Utils.extract(data.today, {height: ['temp', (x) => `${x*2.4}%`]}),
+            '.column__label': Utils.extract(data.today, {textContent: ['temp', (x) => `${x^0}°`]})
+        },
+        '.wind-graphic': {
+            '.wind-info__value': data.windSpeedValues,
+            '.wind-info__arrow': data.windDegrees.map(function(x) { return {transform: `rotate(${x+90}deg)`};}), //what is wrong with (x) => {transform: `rotate(${x}deg)`}
+        },
+        '.graphics-timetable': {
+            '.graphics-timetable__time': Utils.extract(data.today, 'time')
+        }
+    });
+};
+
+function onError() {
+    renderer.render({
+        '.body': {
+            '.onerror': {display: 'block'},
+            '.main': {display: 'none'}
+        }
+    });
+}
 
 Utils.initTabberElement({
     id: "tabber",
@@ -62,3 +92,5 @@ Utils.initTabberElement({
         selected: "tabber__button--selected",
     },
 });
+
+page.search.share('q=Izhevsk');

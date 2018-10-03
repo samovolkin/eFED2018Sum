@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/visual/main.css">
@@ -29,6 +31,9 @@
         <section class="search-tab">
             <input type="text" id="search-input" placeholder="Search">
         </section>
+        <section class="onerror">
+            <h1 class="onerror__heading">Oooops!</h1><p>I can't find this city :(</p>
+        </section>
         <main class="main">
             <section class="basic-weather-data" id="basic-weather-data">
                 <div class="basic-weather">
@@ -41,31 +46,59 @@
             </section>
 
             <section class="additional-data">
-                <p class="line">Humidity: <span class="additional-data__humidity"></span></p>
-                <p class="additional-data__wind">Wind: <span class="value-label"></span></p>
-                <p class="additional-data__rain">Rain: <span class="value-label"></span></p>
-                <p class="additional-data__pressure"></p>
-                <p class="additional-data__clouds"></p>
+                <p class="content-box">
+                    <span class="content-box__key">Humidity:</span>
+                    <span class="content-box__value additional-data__humidity"></span>
+                </p>
+                <p class="content-box">
+                    <span class="content-box__key">Wind:</span>
+                    <span class="content-box__value additional-data__wind"></span>
+                </p>
+                <p class="content-box">
+                    <span class="content-box__key">Rain:</span>
+                    <span class="content-box__value additional-data__rain"></span>
+                </p>
+                <p class="content-box">
+                    <span class="content-box__key">Pressure:</span>
+                    <span class="content-box__value additional-data__pressure"></span>
+                </p>
+                <p class="content-box">
+                    <span class="content-box__key">Clouds:</span>
+                    <span class="content-box__value additional-data__clouds"></span>
+                </p>
             </section>
 
             <section class="forecast">
                 <div class="forecast-item">
-                    <div class="forecast-item__day-name"> 
-                        <div class="temp"></div>
-                        <div class="temp"></div>
-                        <div class="temp"></div> ср</div>
+                    <div class="forecast-item__day-name"> ср</div>
                     <div class="forecast-item__temperature">14 12</div>
-                    <img class="forecast-item__weather-img" alt='weather-img'></div>
+                    <img class="forecast-item__weather-img" alt='weather-img'>
+                </div>
                 </div>
                 <div class="forecast-item">
-                    <div class="forecast-item__day-name"> 
-                        <div class="temp"></div>
-                        <div class="temp"></div>
-                        <div class="temp"></div> ср</div>
+                    <div class="forecast-item__day-name"> ср</div>
                     <div class="forecast-item__temperature">14 12</div>
-                    <img class="forecast-item__weather-img" alt='weather-img'></div>
+                    <img class="forecast-item__weather-img" alt='weather-img'>
                 </div>
-                   
+                </div>
+                <div class="forecast-item">
+                    <div class="forecast-item__day-name"> ср</div>
+                    <div class="forecast-item__temperature">14 12</div>
+                    <img class="forecast-item__weather-img" alt='weather-img'>
+                </div>
+                </div>
+                <div class="forecast-item">
+                    <div class="forecast-item__day-name"> ср</div>
+                    <div class="forecast-item__temperature">14 12</div>
+                    <img class="forecast-item__weather-img" alt='weather-img'>
+                </div>
+                </div>
+                <div class="forecast-item">
+                    <div class="forecast-item__day-name"> ср</div>
+                    <div class="forecast-item__temperature">14 12</div>
+                    <img class="forecast-item__weather-img" alt='weather-img'>
+                </div>
+                </div>
             </section>
 
             <section class="graphics">
@@ -73,7 +106,7 @@
                     <button class="tabber__button tabber__button--selected">Temperature</button>
                     <button class="tabber__button">Wind (m/s)</button>
                     <button class="tabber__button">Rain (mm)</button>
-                
+
                     <section class="temperature-graphic graphic">
                         <div class="column"><span class="column__label"></span></div>
                         <div class="column"><span class="column__label"></span></div>
@@ -85,14 +118,38 @@
                         <div class="column"><span class="column__label"></span></div>
                     </section>
                     <section class="wind-graphic graphic tabber-none">
-                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
-                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
-                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
-                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
-                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
-                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
-                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
-                        <div class="wind-info"><div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg" alt="wind"></div>
+                        <div class="wind-info">
+                            <div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg"
+                                alt="wind">
+                        </div>
+                        <div class="wind-info">
+                            <div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg"
+                                alt="wind">
+                        </div>
+                        <div class="wind-info">
+                            <div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg"
+                                alt="wind">
+                        </div>
+                        <div class="wind-info">
+                            <div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg"
+                                alt="wind">
+                        </div>
+                        <div class="wind-info">
+                            <div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg"
+                                alt="wind">
+                        </div>
+                        <div class="wind-info">
+                            <div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg"
+                                alt="wind">
+                        </div>
+                        <div class="wind-info">
+                            <div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg"
+                                alt="wind">
+                        </div>
+                        <div class="wind-info">
+                            <div class="wind-info__value"></div><img class='wind-info__arrow' src="./images/iconmonstr-arrow-20.svg"
+                                alt="wind">
+                        </div>
                     </section>
                     <section class="rain-graphic graphic tabber-none">
                         <div class="column"><span class="column__label"></span></div>
@@ -105,21 +162,22 @@
                         <div class="column"><span class="column__label"></span></div>
                     </section>
                 </div>
-            <div class="graphics-timetable">
-                <div class="graphics-timetable__time">1</div>
-                <div class="graphics-timetable__time">2</div>
-                <div class="graphics-timetable__time">3</div>
-                <div class="graphics-timetable__time">4</div>
-                <div class="graphics-timetable__time">5</div>
-                <div class="graphics-timetable__time">6</div>
-                <div class="graphics-timetable__time">7</div>
-                <div class="graphics-timetable__time">8</div>
-            </div>
+                <div class="graphics-timetable">
+                    <div class="graphics-timetable__time">1</div>
+                    <div class="graphics-timetable__time">2</div>
+                    <div class="graphics-timetable__time">3</div>
+                    <div class="graphics-timetable__time">4</div>
+                    <div class="graphics-timetable__time">5</div>
+                    <div class="graphics-timetable__time">6</div>
+                    <div class="graphics-timetable__time">7</div>
+                    <div class="graphics-timetable__time">8</div>
+                </div>
 
             </section>
         </main>
     </section>
 </body>
+
 </html>
 
 
@@ -129,7 +187,7 @@
 <script src="./js/mappers/forecast.js"></script>
 <script src="./js/classes/Fetcher.js"></script>
 <script src="./js/classes/Search.js"></script>
+<script src="./js/classes/Renderer.js"></script>
 <script src="./js/classes/Component.js"></script>
 <script src="./js/classes/Page.js"></script>
 <script src="./js/index.js"></script>
-

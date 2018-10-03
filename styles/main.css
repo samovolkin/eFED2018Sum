@@ -10,7 +10,23 @@
     padding: 0;
 }
 
+.onerror {
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+
+.onerror__heading {
+    font-weight: 900;
+    font-size: 2em;
+    margin-bottom: .4em;
+}
+
 .header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
     height: 100%;
     display: flex;
     background-color: var(--main-color);
@@ -41,9 +57,19 @@
     flex: 1;
 }
 
-.main-data__town-name {
+.content-box {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+}
+
+.content-box__value {
+    font-weight: 600;
+}
+
+.basic-weather__town-name {
+    font-family: 'Roboto', sans-serif;
     font-size: 3em;
-    font-weight: 900;
 }
 
 .main-data__weather-type-img {
@@ -55,6 +81,10 @@
     .body {
         flex-direction: column;
         height: unset;
+    }
+
+    .content-box {
+        max-width: 100%;
     }
 
     .header {

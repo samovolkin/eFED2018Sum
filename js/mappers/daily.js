@@ -1,3 +1,7 @@
+function mapDailyData(data) {
+    return new DailyData(data);
+}
+
 function DailyData(data) {
     this.daily = getDailyData(data);
     this.temperatures = this.daily.map((x) =>  `${x.temp^0}°`);

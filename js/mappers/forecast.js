@@ -1,3 +1,11 @@
+function mapForecastData(data) {
+    return new ForecastData(data);
+}
+
+
+
+
+
 function ForecastData(data) {
     this.temperatures = getTemperatures(data);
     this.formattedTemperatures = this.temperatures.map((forecastInfo) => `${forecastInfo.temp_max^0}° ${forecastInfo.temp_min^0}°`);

@@ -1,6 +1,6 @@
 function mapTodayData(data) {
     return {
-        city: `${data.name}`,
+        city: `Weather in ${data.name}`,
         day: (new Date()).toDateString().slice(0,3),
         weatherType: data.weather[0].main,
         temperature: `${data.main.temp^0}°C`,

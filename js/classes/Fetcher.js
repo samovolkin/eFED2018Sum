@@ -5,6 +5,7 @@ class Fetcher extends Speaker {
         delete options.subscribers;
         this.options = options;
         this.url = options.url;
+        this.onError = options.onError;
     }
 
     async onUpdate(query) {
@@ -18,6 +19,12 @@ class Fetcher extends Speaker {
         console.log(request);
 
         let response = await fetch(request);
+        
+        if (response.status != 200) {
+            this.onError();
+            return;
+        }
+
         response = await response.json();
 
         console.log(`Data before:`);
